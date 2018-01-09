@@ -1,0 +1,10 @@
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Proiect BD.exe.config
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Proiect BD.exe
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Proiect BD.pdb
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.csprojResolveAssemblyReference.cache
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Properties.Resources.resources
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.csproj.GenerateResource.Cache
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.csproj.CoreCompileInputs.cache
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.exe
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.pdb
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Form1.resources
