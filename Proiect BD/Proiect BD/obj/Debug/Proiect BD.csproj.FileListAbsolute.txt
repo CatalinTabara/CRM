@@ -8,3 +8,4 @@ C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.cs
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.exe
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.pdb
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Form1.resources
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Form2.resources

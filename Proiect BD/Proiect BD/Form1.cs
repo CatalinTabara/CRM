@@ -56,6 +56,14 @@ namespace Proiect_BD
             f2.ShowDialog();
         }
 
+        private void Login_Exit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to exit ?", "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+  
         private void textBox_login_pwd_TextChanged(object sender, EventArgs e)
         {
 
