@@ -95,5 +95,17 @@
   <ItemGroup>
     <None Include="Resources\b1f80662e3a36e85f2ab0b03d4a36177.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button2.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button3.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown-button-png-image-98694.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
