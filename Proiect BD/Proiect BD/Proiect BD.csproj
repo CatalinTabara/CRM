@@ -107,5 +107,8 @@
   <ItemGroup>
     <None Include="Resources\shutdown-button-png-image-98694.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button4.Image.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
