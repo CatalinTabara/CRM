@@ -43,12 +43,17 @@
             this.Box_contacte = new System.Windows.Forms.PictureBox();
             this.Box_Home = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Home = new System.Windows.Forms.Panel();
-            this.panel_Leads = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage_Home = new System.Windows.Forms.TabPage();
+            this.button_Add_User = new System.Windows.Forms.Button();
+            this.tabPage_Leads = new System.Windows.Forms.TabPage();
+            this.tabPage_Potential = new System.Windows.Forms.TabPage();
+            this.label_Timer = new System.Windows.Forms.Label();
+            this.button_Show_Users = new System.Windows.Forms.Button();
+            this.button_Modify_User = new System.Windows.Forms.Button();
+            this.button_Delete_User = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button_Show_Activities = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Leads.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).BeginInit();
@@ -57,8 +62,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box_contacte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Home.SuspendLayout();
-            this.panel_Leads.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage_Home.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -195,6 +200,7 @@
             this.Box_Calendar.Size = new System.Drawing.Size(56, 41);
             this.Box_Calendar.TabIndex = 3;
             this.Box_Calendar.TabStop = false;
+            this.Box_Calendar.Click += new System.EventHandler(this.Box_Calendar_Click);
             // 
             // Box_contacte
             // 
@@ -229,69 +235,139 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Home
+            // tabControl1
             // 
-            this.Home.Controls.Add(this.panel_Leads);
-            this.Home.Controls.Add(this.label3);
-            this.Home.Controls.Add(this.dateTimePicker1);
-            this.Home.Location = new System.Drawing.Point(133, 1);
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(528, 484);
-            this.Home.TabIndex = 1;
-            this.Home.Paint += new System.Windows.Forms.PaintEventHandler(this.Home_Paint);
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControl1.Controls.Add(this.tabPage_Home);
+            this.tabControl1.Controls.Add(this.tabPage_Leads);
+            this.tabControl1.Controls.Add(this.tabPage_Potential);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.ItemSize = new System.Drawing.Size(5, 20);
+            this.tabControl1.Location = new System.Drawing.Point(155, 77);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(0, 0);
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(495, 339);
+            this.tabControl1.TabIndex = 1;
             // 
-            // panel_Leads
+            // tabPage_Home
             // 
-            this.panel_Leads.Controls.Add(this.label4);
-            this.panel_Leads.Controls.Add(this.dateTimePicker3);
-            this.panel_Leads.Location = new System.Drawing.Point(0, 0);
-            this.panel_Leads.Name = "panel_Leads";
-            this.panel_Leads.Size = new System.Drawing.Size(528, 484);
-            this.panel_Leads.TabIndex = 4;
+            this.tabPage_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage_Home.Controls.Add(this.button_Show_Activities);
+            this.tabPage_Home.Controls.Add(this.button_Delete_User);
+            this.tabPage_Home.Controls.Add(this.button_Modify_User);
+            this.tabPage_Home.Controls.Add(this.button_Show_Users);
+            this.tabPage_Home.Controls.Add(this.button_Add_User);
+            this.tabPage_Home.Location = new System.Drawing.Point(4, 24);
+            this.tabPage_Home.Name = "tabPage_Home";
+            this.tabPage_Home.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Home.Size = new System.Drawing.Size(487, 311);
+            this.tabPage_Home.TabIndex = 0;
+            this.tabPage_Home.Text = " ";
+            this.tabPage_Home.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // label4
+            // button_Add_User
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(141, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Page 2";
+            this.button_Add_User.Location = new System.Drawing.Point(22, 100);
+            this.button_Add_User.Name = "button_Add_User";
+            this.button_Add_User.Size = new System.Drawing.Size(75, 23);
+            this.button_Add_User.TabIndex = 0;
+            this.button_Add_User.Text = "Add User";
+            this.button_Add_User.UseVisualStyleBackColor = true;
+            this.button_Add_User.Click += new System.EventHandler(this.button_Add_User_Click);
             // 
-            // dateTimePicker3
+            // tabPage_Leads
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(127, 34);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 0;
+            this.tabPage_Leads.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage_Leads.Location = new System.Drawing.Point(4, 24);
+            this.tabPage_Leads.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPage_Leads.Name = "tabPage_Leads";
+            this.tabPage_Leads.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Leads.Size = new System.Drawing.Size(487, 311);
+            this.tabPage_Leads.TabIndex = 1;
+            this.tabPage_Leads.Text = " ";
             // 
-            // label3
+            // tabPage_Potential
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(141, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Page 1";
+            this.tabPage_Potential.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage_Potential.Location = new System.Drawing.Point(4, 24);
+            this.tabPage_Potential.Name = "tabPage_Potential";
+            this.tabPage_Potential.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Potential.Size = new System.Drawing.Size(487, 311);
+            this.tabPage_Potential.TabIndex = 2;
+            this.tabPage_Potential.Text = " ";
             // 
-            // dateTimePicker1
+            // label_Timer
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(127, 34);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.label_Timer.AutoSize = true;
+            this.label_Timer.Location = new System.Drawing.Point(153, 9);
+            this.label_Timer.Name = "label_Timer";
+            this.label_Timer.Size = new System.Drawing.Size(10, 13);
+            this.label_Timer.TabIndex = 2;
+            this.label_Timer.Text = " ";
+            // 
+            // button_Show_Users
+            // 
+            this.button_Show_Users.Location = new System.Drawing.Point(22, 54);
+            this.button_Show_Users.Name = "button_Show_Users";
+            this.button_Show_Users.Size = new System.Drawing.Size(75, 23);
+            this.button_Show_Users.TabIndex = 1;
+            this.button_Show_Users.Text = "Show Users";
+            this.button_Show_Users.UseVisualStyleBackColor = true;
+            // 
+            // button_Modify_User
+            // 
+            this.button_Modify_User.Location = new System.Drawing.Point(22, 148);
+            this.button_Modify_User.Name = "button_Modify_User";
+            this.button_Modify_User.Size = new System.Drawing.Size(75, 23);
+            this.button_Modify_User.TabIndex = 2;
+            this.button_Modify_User.Text = "Modify User";
+            this.button_Modify_User.UseVisualStyleBackColor = true;
+            // 
+            // button_Delete_User
+            // 
+            this.button_Delete_User.Location = new System.Drawing.Point(22, 194);
+            this.button_Delete_User.Name = "button_Delete_User";
+            this.button_Delete_User.Size = new System.Drawing.Size(75, 23);
+            this.button_Delete_User.TabIndex = 3;
+            this.button_Delete_User.Text = "Delete User";
+            this.button_Delete_User.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(487, 311);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = " ";
+            // 
+            // button_Show_Activities
+            // 
+            this.button_Show_Activities.Location = new System.Drawing.Point(132, 54);
+            this.button_Show_Activities.Name = "button_Show_Activities";
+            this.button_Show_Activities.Size = new System.Drawing.Size(75, 23);
+            this.button_Show_Activities.TabIndex = 4;
+            this.button_Show_Activities.Text = "Show Activities";
+            this.button_Show_Activities.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(659, 484);
-            this.Controls.Add(this.Home);
+            this.Controls.Add(this.label_Timer);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -303,11 +379,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box_contacte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Home.ResumeLayout(false);
-            this.Home.PerformLayout();
-            this.panel_Leads.ResumeLayout(false);
-            this.panel_Leads.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage_Home.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -319,10 +394,8 @@
         private System.Windows.Forms.PictureBox Box_contacte;
         private System.Windows.Forms.PictureBox Box_Calendar;
         private System.Windows.Forms.PictureBox Box_Exit;
-        private System.Windows.Forms.Panel Home;
         private System.Windows.Forms.Label label_Leads;
         private System.Windows.Forms.Label label_Home;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel Leads;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label1;
@@ -330,9 +403,16 @@
         private System.Windows.Forms.PictureBox Box_Potential;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Page2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel_Leads;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage_Home;
+        private System.Windows.Forms.TabPage tabPage_Leads;
+        private System.Windows.Forms.Label label_Timer;
+        private System.Windows.Forms.TabPage tabPage_Potential;
+        private System.Windows.Forms.Button button_Add_User;
+        private System.Windows.Forms.Button button_Modify_User;
+        private System.Windows.Forms.Button button_Show_Users;
+        private System.Windows.Forms.Button button_Delete_User;
+        private System.Windows.Forms.Button button_Show_Activities;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

@@ -63,7 +63,12 @@ namespace Proiect_BD
                 Application.Exit();
             }
         }
-  
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBox_login_pwd_TextChanged(object sender, EventArgs e)
         {
 

@@ -33,9 +33,9 @@
             this.textBox_login_user = new System.Windows.Forms.TextBox();
             this.textBox_login_pwd = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Login_Exit = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Login_Exit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sign In";
             // 
+            // Login_Exit
+            // 
+            this.Login_Exit.Location = new System.Drawing.Point(152, 103);
+            this.Login_Exit.Name = "Login_Exit";
+            this.Login_Exit.Size = new System.Drawing.Size(85, 25);
+            this.Login_Exit.TabIndex = 6;
+            this.Login_Exit.Text = "Exit";
+            this.Login_Exit.UseVisualStyleBackColor = true;
+            this.Login_Exit.Click += new System.EventHandler(this.Login_Exit_Click);
+            // 
             // login
             // 
             this.login.Location = new System.Drawing.Point(61, 103);
@@ -111,16 +121,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // Login_Exit
-            // 
-            this.Login_Exit.Location = new System.Drawing.Point(152, 103);
-            this.Login_Exit.Name = "Login_Exit";
-            this.Login_Exit.Size = new System.Drawing.Size(85, 25);
-            this.Login_Exit.TabIndex = 6;
-            this.Login_Exit.Text = "Exit";
-            this.Login_Exit.UseVisualStyleBackColor = true;
-            this.Login_Exit.Click += new System.EventHandler(this.Login_Exit_Click);
-            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -129,6 +129,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
