@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Leads__Ponturi_">
+    <Key>
+      <PropertyRef Name="Lead_ID" />
+    </Key>
+    <Property Name="Lead_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Nume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Prenume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Nr_tel" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Email" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="Companie" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Contact" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Evenimentes" Relationship="Self.FK_Evenimente_Leads__Ponturi_" FromRole="Leads__Ponturi_" ToRole="Evenimente" />
+    <NavigationProperty Name="Potential_client_" Relationship="Self.FK_Potential_client__Leads__Ponturi_" FromRole="Leads__Ponturi_" ToRole="Potential_client_" />
+  </EntityType>
+  <EntityType Name="Utilizatori">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Nume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Prenume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Grad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Potential_client_" Relationship="Self.FK_Potential_client__Utilizatori" FromRole="Utilizatori" ToRole="Potential_client_" />
+  </EntityType>
+  <EntityType Name="Evenimente">
+    <Key>
+      <PropertyRef Name="Tip" />
+      <PropertyRef Name="Responsabil_Nume" />
+      <PropertyRef Name="Data" />
+    </Key>
+    <Property Name="Tip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Mesaj" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Responsabil_Nume" Type="String" MaxLength="18" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Responsabil_Prenume" Type="String" MaxLength="18" FixedLength="true" Unicode="true" />
+    <Property Name="Data" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Lead_ID" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Leads__Ponturi_" Relationship="Self.FK_Evenimente_Leads__Ponturi_" FromRole="Evenimente" ToRole="Leads__Ponturi_" />
+  </EntityType>
+  <EntityType Name="Potential_client_">
+    <Key>
+      <PropertyRef Name="Lead_ID" />
+      <PropertyRef Name="Nume" />
+      <PropertyRef Name="Prenume" />
+      <PropertyRef Name="Task" />
+      <PropertyRef Name="Caretaker" />
+    </Key>
+    <Property Name="Lead_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Nume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Prenume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Task" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Caretaker" Type="Int32" Nullable="false" />
+    <Property Name="Data_inchiere_contract" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Leads__Ponturi_" Relationship="Self.FK_Potential_client__Leads__Ponturi_" FromRole="Potential_client_" ToRole="Leads__Ponturi_" />
+    <NavigationProperty Name="Utilizatori" Relationship="Self.FK_Potential_client__Utilizatori" FromRole="Potential_client_" ToRole="Utilizatori" />
+  </EntityType>
+  <Association Name="FK_Evenimente_Leads__Ponturi_">
+    <End Role="Leads__Ponturi_" Type="Self.Leads__Ponturi_" Multiplicity="0..1" />
+    <End Role="Evenimente" Type="Self.Evenimente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads__Ponturi_">
+        <PropertyRef Name="Lead_ID" />
+      </Principal>
+      <Dependent Role="Evenimente">
+        <PropertyRef Name="Lead_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Potential_client__Leads__Ponturi_">
+    <End Role="Leads__Ponturi_" Type="Self.Leads__Ponturi_" Multiplicity="1" />
+    <End Role="Potential_client_" Type="Self.Potential_client_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads__Ponturi_">
+        <PropertyRef Name="Lead_ID" />
+      </Principal>
+      <Dependent Role="Potential_client_">
+        <PropertyRef Name="Lead_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Potential_client__Utilizatori">
+    <End Role="Utilizatori" Type="Self.Utilizatori" Multiplicity="1" />
+    <End Role="Potential_client_" Type="Self.Potential_client_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizatori">
+        <PropertyRef Name="Employee_ID" />
+      </Principal>
+      <Dependent Role="Potential_client_">
+        <PropertyRef Name="Caretaker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Model_CRM" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Leads__Ponturi_" EntityType="Self.Leads__Ponturi_" />
+    <EntitySet Name="Utilizatoris" EntityType="Self.Utilizatori" />
+    <EntitySet Name="Evenimentes" EntityType="Self.Evenimente" />
+    <EntitySet Name="Potential_client_" EntityType="Self.Potential_client_" />
+    <AssociationSet Name="FK_Evenimente_Leads__Ponturi_" Association="Self.FK_Evenimente_Leads__Ponturi_">
+      <End Role="Leads__Ponturi_" EntitySet="Leads__Ponturi_" />
+      <End Role="Evenimente" EntitySet="Evenimentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Potential_client__Leads__Ponturi_" Association="Self.FK_Potential_client__Leads__Ponturi_">
+      <End Role="Leads__Ponturi_" EntitySet="Leads__Ponturi_" />
+      <End Role="Potential_client_" EntitySet="Potential_client_" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Potential_client__Utilizatori" Association="Self.FK_Potential_client__Utilizatori">
+      <End Role="Utilizatori" EntitySet="Utilizatoris" />
+      <End Role="Potential_client_" EntitySet="Potential_client_" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

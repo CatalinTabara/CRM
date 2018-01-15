@@ -9,3 +9,8 @@ C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.ex
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect BD.pdb
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Form1.resources
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Form2.resources
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\EntityFramework.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\EntityFramework.xml
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Resources.Form_Add_User.resources

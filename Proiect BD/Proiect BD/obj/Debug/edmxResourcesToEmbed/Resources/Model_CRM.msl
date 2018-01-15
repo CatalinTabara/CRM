@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRMModelStoreContainer" CdmEntityContainer="Model_CRM">
+    <EntitySetMapping Name="Leads__Ponturi_">
+      <EntityTypeMapping TypeName="CRMModel.Leads__Ponturi_">
+        <MappingFragment StoreEntitySet="Leads (Ponturi)">
+          <ScalarProperty Name="Lead_ID" ColumnName="Lead_ID" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Nr_tel" ColumnName="Nr tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Companie" ColumnName="Companie" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilizatoris">
+      <EntityTypeMapping TypeName="CRMModel.Utilizatori">
+        <MappingFragment StoreEntitySet="Utilizatori">
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Grad" ColumnName="Grad" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evenimentes">
+      <EntityTypeMapping TypeName="CRMModel.Evenimente">
+        <MappingFragment StoreEntitySet="Evenimente">
+          <ScalarProperty Name="Tip" ColumnName="Tip" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+          <ScalarProperty Name="Responsabil_Nume" ColumnName="Responsabil_Nume" />
+          <ScalarProperty Name="Responsabil_Prenume" ColumnName="Responsabil_Prenume" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Lead_ID" ColumnName="Lead_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Potential_client_">
+      <EntityTypeMapping TypeName="CRMModel.Potential_client_">
+        <MappingFragment StoreEntitySet="Potential(client)">
+          <ScalarProperty Name="Lead_ID" ColumnName="Lead_ID" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Task" ColumnName="Task" />
+          <ScalarProperty Name="Caretaker" ColumnName="Caretaker" />
+          <ScalarProperty Name="Data_inchiere_contract" ColumnName="Data inchiere contract" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proiect_BD.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,18 +41,13 @@ namespace Proiect_BD
         {
             tabControl1.SelectedIndex = 0;
 
-        }
-
-        
-        
-
+        }     
+            
         private void Box_contacte_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
         }
-        
-      
-
+            
         private void Home_Paint(object sender, PaintEventArgs e)
         {
 
@@ -101,10 +97,23 @@ namespace Proiect_BD
 
         private void button_Add_User_Click(object sender, EventArgs e)
         {
-
+            Form f3 = new Form_Add_User();
+           
+           // this.Hide();
+            f3.ShowDialog();
         }
 
         private void Box_Calendar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button_Show_Users_Click(object sender, EventArgs e)
         {
 
         }

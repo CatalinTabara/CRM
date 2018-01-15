@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using Proiect_BD.Resources;
 
 
+
+
 namespace Proiect_BD
 {
   
@@ -50,10 +52,23 @@ namespace Proiect_BD
         {
             user = textBox_login_user.Text;
             pwd = sha256(textBox_login_pwd.Text);
-            System.Windows.Forms.MessageBox.Show(pwd);
-            Form f2 = new Form2();
-            this.Hide();
-            f2.ShowDialog();
+            
+            Model_CRM Context = new Model_CRM();
+            
+            Utilizatori aux = Context.Utilizatoris.Where(x => x.Username == user && x.Password == textBox_login_pwd.Text).FirstOrDefault();
+            Context.Dispose();
+            if(aux!=null)
+            {
+                Form f2 = new Form2();
+                this.Hide();
+                f2.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect username or password!","Error",MessageBoxButtons.OK);
+            }
+
+            
         }
 
         private void Login_Exit_Click(object sender, EventArgs e)

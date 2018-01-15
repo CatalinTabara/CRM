@@ -123,7 +123,7 @@
             // 
             // Form1
             // 
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(440, 187);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);

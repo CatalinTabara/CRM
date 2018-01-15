@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.Leads = new System.Windows.Forms.Panel();
@@ -45,15 +46,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Home = new System.Windows.Forms.TabPage();
+            this.button_Delete_User = new System.Windows.Forms.Button();
+            this.button_Modify_User = new System.Windows.Forms.Button();
+            this.button_Show_Users = new System.Windows.Forms.Button();
             this.button_Add_User = new System.Windows.Forms.Button();
             this.tabPage_Leads = new System.Windows.Forms.TabPage();
             this.tabPage_Potential = new System.Windows.Forms.TabPage();
-            this.label_Timer = new System.Windows.Forms.Label();
-            this.button_Show_Users = new System.Windows.Forms.Button();
-            this.button_Modify_User = new System.Windows.Forms.Button();
-            this.button_Delete_User = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button_Show_Activities = new System.Windows.Forms.Button();
+            this.label_Timer = new System.Windows.Forms.Label();
+            this.cRMDataSet = new Proiect_BD.CRMDataSet();
+            this.cRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.Leads.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).BeginInit();
@@ -64,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage_Home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -255,7 +259,6 @@
             // tabPage_Home
             // 
             this.tabPage_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tabPage_Home.Controls.Add(this.button_Show_Activities);
             this.tabPage_Home.Controls.Add(this.button_Delete_User);
             this.tabPage_Home.Controls.Add(this.button_Modify_User);
             this.tabPage_Home.Controls.Add(this.button_Show_Users);
@@ -267,6 +270,34 @@
             this.tabPage_Home.TabIndex = 0;
             this.tabPage_Home.Text = " ";
             this.tabPage_Home.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button_Delete_User
+            // 
+            this.button_Delete_User.Location = new System.Drawing.Point(22, 194);
+            this.button_Delete_User.Name = "button_Delete_User";
+            this.button_Delete_User.Size = new System.Drawing.Size(75, 23);
+            this.button_Delete_User.TabIndex = 3;
+            this.button_Delete_User.Text = "Delete User";
+            this.button_Delete_User.UseVisualStyleBackColor = true;
+            // 
+            // button_Modify_User
+            // 
+            this.button_Modify_User.Location = new System.Drawing.Point(22, 148);
+            this.button_Modify_User.Name = "button_Modify_User";
+            this.button_Modify_User.Size = new System.Drawing.Size(75, 23);
+            this.button_Modify_User.TabIndex = 2;
+            this.button_Modify_User.Text = "Modify User";
+            this.button_Modify_User.UseVisualStyleBackColor = true;
+            // 
+            // button_Show_Users
+            // 
+            this.button_Show_Users.Location = new System.Drawing.Point(22, 54);
+            this.button_Show_Users.Name = "button_Show_Users";
+            this.button_Show_Users.Size = new System.Drawing.Size(75, 23);
+            this.button_Show_Users.TabIndex = 1;
+            this.button_Show_Users.Text = "Show Users";
+            this.button_Show_Users.UseVisualStyleBackColor = true;
+            this.button_Show_Users.Click += new System.EventHandler(this.button_Show_Users_Click);
             // 
             // button_Add_User
             // 
@@ -299,42 +330,6 @@
             this.tabPage_Potential.TabIndex = 2;
             this.tabPage_Potential.Text = " ";
             // 
-            // label_Timer
-            // 
-            this.label_Timer.AutoSize = true;
-            this.label_Timer.Location = new System.Drawing.Point(153, 9);
-            this.label_Timer.Name = "label_Timer";
-            this.label_Timer.Size = new System.Drawing.Size(10, 13);
-            this.label_Timer.TabIndex = 2;
-            this.label_Timer.Text = " ";
-            // 
-            // button_Show_Users
-            // 
-            this.button_Show_Users.Location = new System.Drawing.Point(22, 54);
-            this.button_Show_Users.Name = "button_Show_Users";
-            this.button_Show_Users.Size = new System.Drawing.Size(75, 23);
-            this.button_Show_Users.TabIndex = 1;
-            this.button_Show_Users.Text = "Show Users";
-            this.button_Show_Users.UseVisualStyleBackColor = true;
-            // 
-            // button_Modify_User
-            // 
-            this.button_Modify_User.Location = new System.Drawing.Point(22, 148);
-            this.button_Modify_User.Name = "button_Modify_User";
-            this.button_Modify_User.Size = new System.Drawing.Size(75, 23);
-            this.button_Modify_User.TabIndex = 2;
-            this.button_Modify_User.Text = "Modify User";
-            this.button_Modify_User.UseVisualStyleBackColor = true;
-            // 
-            // button_Delete_User
-            // 
-            this.button_Delete_User.Location = new System.Drawing.Point(22, 194);
-            this.button_Delete_User.Name = "button_Delete_User";
-            this.button_Delete_User.Size = new System.Drawing.Size(75, 23);
-            this.button_Delete_User.TabIndex = 3;
-            this.button_Delete_User.Text = "Delete User";
-            this.button_Delete_User.UseVisualStyleBackColor = true;
-            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -345,14 +340,24 @@
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = " ";
             // 
-            // button_Show_Activities
+            // label_Timer
             // 
-            this.button_Show_Activities.Location = new System.Drawing.Point(132, 54);
-            this.button_Show_Activities.Name = "button_Show_Activities";
-            this.button_Show_Activities.Size = new System.Drawing.Size(75, 23);
-            this.button_Show_Activities.TabIndex = 4;
-            this.button_Show_Activities.Text = "Show Activities";
-            this.button_Show_Activities.UseVisualStyleBackColor = true;
+            this.label_Timer.AutoSize = true;
+            this.label_Timer.Location = new System.Drawing.Point(153, 9);
+            this.label_Timer.Name = "label_Timer";
+            this.label_Timer.Size = new System.Drawing.Size(10, 13);
+            this.label_Timer.TabIndex = 2;
+            this.label_Timer.Text = " ";
+            // 
+            // cRMDataSet
+            // 
+            this.cRMDataSet.DataSetName = "CRMDataSet";
+            this.cRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cRMDataSetBindingSource
+            // 
+            this.cRMDataSetBindingSource.DataSource = this.cRMDataSet;
+            this.cRMDataSetBindingSource.Position = 0;
             // 
             // Form2
             // 
@@ -381,6 +386,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage_Home.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,7 +419,8 @@
         private System.Windows.Forms.Button button_Modify_User;
         private System.Windows.Forms.Button button_Show_Users;
         private System.Windows.Forms.Button button_Delete_User;
-        private System.Windows.Forms.Button button_Show_Activities;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.BindingSource cRMDataSetBindingSource;
+        private CRMDataSet cRMDataSet;
     }
 }
