@@ -46,6 +46,8 @@ namespace Proiect_BD
         private void Box_contacte_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
+
+
         }
             
         private void Home_Paint(object sender, PaintEventArgs e)
@@ -73,27 +75,6 @@ namespace Proiect_BD
 
         }
 
-        private void Box_Exit_Click(object sender, EventArgs e)
-        {
-
-            Application.Exit();
-        }
-
-        void Timer_Tick(object sender, EventArgs e)
-        {
-            label_Timer.Text = DateTime.Now.ToString("HH:mm:ss");
-        }
-
-        protected override void WndProc(ref Message m)
-        {
-            base.WndProc(ref m);
-            if (m.Msg == WM_NCHITTEST)
-                m.Result = (IntPtr)(HT_CAPTION);
-        }
-
-        private const int WM_NCHITTEST = 0x84;
-        private const int HT_CLIENT = 0x1;
-        private const int HT_CAPTION = 0x2;
 
         private void button_Add_User_Click(object sender, EventArgs e)
         {
@@ -121,6 +102,8 @@ namespace Proiect_BD
 
         private void Form2_Load_1(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cRMDataSet_Leads._Leads__Ponturi_' table. You can move, or remove it, as needed.
+           // this.leads__Ponturi_TableAdapter.Fill(this.cRMDataSet_Leads._Leads__Ponturi_);
 
         }
 
@@ -129,5 +112,27 @@ namespace Proiect_BD
             Form f5 = new Form_Delete_User();
             f5.ShowDialog();
         }
+
+
+        private void Box_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        void Timer_Tick(object sender, EventArgs e)
+        {
+            label_Timer.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            if (m.Msg == WM_NCHITTEST)
+                m.Result = (IntPtr)(HT_CAPTION);
+        }
+
+        private const int WM_NCHITTEST = 0x84;
+        private const int HT_CLIENT = 0x1;
+        private const int HT_CAPTION = 0x2;
     }
 }

@@ -65,6 +65,7 @@
             this.textBox_login_user.Size = new System.Drawing.Size(143, 20);
             this.textBox_login_user.TabIndex = 2;
             this.textBox_login_user.TextChanged += new System.EventHandler(this.textBox_login_user_TextChanged);
+            this.textBox_login_user.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_login_user_KeyDown);
             // 
             // textBox_login_pwd
             // 
@@ -74,6 +75,7 @@
             this.textBox_login_pwd.Size = new System.Drawing.Size(143, 20);
             this.textBox_login_pwd.TabIndex = 3;
             this.textBox_login_pwd.TextChanged += new System.EventHandler(this.textBox_login_pwd_TextChanged);
+            this.textBox_login_pwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_login_pwd_KeyDown);
             // 
             // groupBox1
             // 

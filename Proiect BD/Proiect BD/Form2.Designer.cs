@@ -34,10 +34,16 @@
             this.Leads = new System.Windows.Forms.Panel();
             this.Page2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.Box_Potential = new System.Windows.Forms.PictureBox();
             this.label_Calendar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Leads = new System.Windows.Forms.Label();
             this.label_Home = new System.Windows.Forms.Label();
+            this.Box_Exit = new System.Windows.Forms.PictureBox();
+            this.Box_Calendar = new System.Windows.Forms.PictureBox();
+            this.Box_contacte = new System.Windows.Forms.PictureBox();
+            this.Box_Home = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Home = new System.Windows.Forms.TabPage();
             this.button_Delete_User = new System.Windows.Forms.Button();
@@ -45,29 +51,45 @@
             this.button_Show_Users = new System.Windows.Forms.Button();
             this.button_Add_User = new System.Windows.Forms.Button();
             this.tabPage_Leads = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage_Potential = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label_Timer = new System.Windows.Forms.Label();
-            this.cRMDataSet = new Proiect_BD.CRMDataSet();
+           // this.cRMDataSet = new Proiect_BD.CRMDataSet();
             this.cRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Box_Potential = new System.Windows.Forms.PictureBox();
-            this.Box_Exit = new System.Windows.Forms.PictureBox();
-            this.Box_Calendar = new System.Windows.Forms.PictureBox();
-            this.Box_contacte = new System.Windows.Forms.PictureBox();
-            this.Box_Home = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cRMDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cRMDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            //this.cRMDataSet_Leads = new Proiect_BD.CRMDataSet_Leads();
+            this.leadsPonturiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.leads__Ponturi_TableAdapter = new Proiect_BD.CRMDataSet_LeadsTableAdapters.Leads__Ponturi_TableAdapter();
+            this.leadIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.Leads.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage_Home.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Calendar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_contacte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage_Home.SuspendLayout();
+            this.tabPage_Leads.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.cRMDataSet_Leads)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,6 +147,17 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 0;
             // 
+            // Box_Potential
+            // 
+            this.Box_Potential.BackgroundImage = global::Proiect_BD.Properties.Resources.button4_Image;
+            this.Box_Potential.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Box_Potential.Location = new System.Drawing.Point(36, 260);
+            this.Box_Potential.Name = "Box_Potential";
+            this.Box_Potential.Size = new System.Drawing.Size(56, 41);
+            this.Box_Potential.TabIndex = 1;
+            this.Box_Potential.TabStop = false;
+            this.Box_Potential.Click += new System.EventHandler(this.Box_Potential_Click);
+            // 
             // label_Calendar
             // 
             this.label_Calendar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -172,6 +205,61 @@
             this.label_Home.Size = new System.Drawing.Size(35, 13);
             this.label_Home.TabIndex = 0;
             this.label_Home.Text = "Home";
+            // 
+            // Box_Exit
+            // 
+            this.Box_Exit.BackgroundImage = global::Proiect_BD.Properties.Resources.shutdown_button_png_image_98694;
+            this.Box_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Box_Exit.Location = new System.Drawing.Point(36, 411);
+            this.Box_Exit.Name = "Box_Exit";
+            this.Box_Exit.Size = new System.Drawing.Size(56, 41);
+            this.Box_Exit.TabIndex = 4;
+            this.Box_Exit.TabStop = false;
+            this.Box_Exit.Click += new System.EventHandler(this.Box_Exit_Click);
+            // 
+            // Box_Calendar
+            // 
+            this.Box_Calendar.BackgroundImage = global::Proiect_BD.Properties.Resources.button3_Image;
+            this.Box_Calendar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Box_Calendar.Location = new System.Drawing.Point(36, 335);
+            this.Box_Calendar.Name = "Box_Calendar";
+            this.Box_Calendar.Size = new System.Drawing.Size(56, 41);
+            this.Box_Calendar.TabIndex = 3;
+            this.Box_Calendar.TabStop = false;
+            this.Box_Calendar.Click += new System.EventHandler(this.Box_Calendar_Click);
+            // 
+            // Box_contacte
+            // 
+            this.Box_contacte.BackgroundImage = global::Proiect_BD.Properties.Resources.button2_Image;
+            this.Box_contacte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Box_contacte.Location = new System.Drawing.Point(36, 191);
+            this.Box_contacte.Name = "Box_contacte";
+            this.Box_contacte.Size = new System.Drawing.Size(56, 41);
+            this.Box_contacte.TabIndex = 2;
+            this.Box_contacte.TabStop = false;
+            this.Box_contacte.Click += new System.EventHandler(this.Box_contacte_Click);
+            // 
+            // Box_Home
+            // 
+            this.Box_Home.BackgroundImage = global::Proiect_BD.Properties.Resources.button1_Image;
+            this.Box_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Box_Home.Location = new System.Drawing.Point(36, 120);
+            this.Box_Home.Name = "Box_Home";
+            this.Box_Home.Size = new System.Drawing.Size(56, 41);
+            this.Box_Home.TabIndex = 1;
+            this.Box_Home.TabStop = false;
+            this.Box_Home.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Proiect_BD.Properties.Resources.b1f80662e3a36e85f2ab0b03d4a36177;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 98);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // tabControl1
             // 
@@ -247,6 +335,10 @@
             // tabPage_Leads
             // 
             this.tabPage_Leads.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage_Leads.Controls.Add(this.button3);
+            this.tabPage_Leads.Controls.Add(this.button2);
+            this.tabPage_Leads.Controls.Add(this.button1);
+            this.tabPage_Leads.Controls.Add(this.dataGridView1);
             this.tabPage_Leads.Location = new System.Drawing.Point(4, 24);
             this.tabPage_Leads.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage_Leads.Name = "tabPage_Leads";
@@ -254,6 +346,51 @@
             this.tabPage_Leads.Size = new System.Drawing.Size(487, 311);
             this.tabPage_Leads.TabIndex = 1;
             this.tabPage_Leads.Text = " ";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(266, 169);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(147, 169);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Delete Lead";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(27, 169);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Add Lead";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.leadIDDataGridViewTextBoxColumn,
+            this.numeDataGridViewTextBoxColumn,
+            this.prenumeDataGridViewTextBoxColumn,
+            this.nrTelDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.companieDataGridViewTextBoxColumn,
+            this.contactDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.leadsPonturiBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(467, 135);
+            this.dataGridView1.TabIndex = 0;
             // 
             // tabPage_Potential
             // 
@@ -286,79 +423,79 @@
             // 
             // cRMDataSet
             // 
-            this.cRMDataSet.DataSetName = "CRMDataSet";
-            this.cRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+          //  this.cRMDataSet.DataSetName = "CRMDataSet";
+          //  this.cRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cRMDataSetBindingSource
             // 
-            this.cRMDataSetBindingSource.DataSource = this.cRMDataSet;
-            this.cRMDataSetBindingSource.Position = 0;
+           // this.cRMDataSetBindingSource.DataSource = this.cRMDataSet;
+          //  this.cRMDataSetBindingSource.Position = 0;
             // 
-            // Box_Potential
+            // cRMDataSetBindingSource1
             // 
-            this.Box_Potential.BackgroundImage = global::Proiect_BD.Properties.Resources.button4_Image;
-            this.Box_Potential.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Box_Potential.Location = new System.Drawing.Point(36, 260);
-            this.Box_Potential.Name = "Box_Potential";
-            this.Box_Potential.Size = new System.Drawing.Size(56, 41);
-            this.Box_Potential.TabIndex = 1;
-            this.Box_Potential.TabStop = false;
-            this.Box_Potential.Click += new System.EventHandler(this.Box_Potential_Click);
+          //  this.cRMDataSetBindingSource1.DataSource = this.cRMDataSet;
+           // this.cRMDataSetBindingSource1.Position = 0;
             // 
-            // Box_Exit
+            // cRMDataSetBindingSource2
             // 
-            this.Box_Exit.BackgroundImage = global::Proiect_BD.Properties.Resources.shutdown_button_png_image_98694;
-            this.Box_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Box_Exit.Location = new System.Drawing.Point(36, 411);
-            this.Box_Exit.Name = "Box_Exit";
-            this.Box_Exit.Size = new System.Drawing.Size(56, 41);
-            this.Box_Exit.TabIndex = 4;
-            this.Box_Exit.TabStop = false;
-            this.Box_Exit.Click += new System.EventHandler(this.Box_Exit_Click);
+          //  this.cRMDataSetBindingSource2.DataSource = this.cRMDataSet;
+            this.cRMDataSetBindingSource2.Position = 0;
             // 
-            // Box_Calendar
+            // cRMDataSet_Leads
             // 
-            this.Box_Calendar.BackgroundImage = global::Proiect_BD.Properties.Resources.button3_Image;
-            this.Box_Calendar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Box_Calendar.Location = new System.Drawing.Point(36, 335);
-            this.Box_Calendar.Name = "Box_Calendar";
-            this.Box_Calendar.Size = new System.Drawing.Size(56, 41);
-            this.Box_Calendar.TabIndex = 3;
-            this.Box_Calendar.TabStop = false;
-            this.Box_Calendar.Click += new System.EventHandler(this.Box_Calendar_Click);
+            //this.cRMDataSet_Leads.DataSetName = "CRMDataSet_Leads";
+            //this.cRMDataSet_Leads.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Box_contacte
+            // leadsPonturiBindingSource
             // 
-            this.Box_contacte.BackgroundImage = global::Proiect_BD.Properties.Resources.button2_Image;
-            this.Box_contacte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Box_contacte.Location = new System.Drawing.Point(36, 191);
-            this.Box_contacte.Name = "Box_contacte";
-            this.Box_contacte.Size = new System.Drawing.Size(56, 41);
-            this.Box_contacte.TabIndex = 2;
-            this.Box_contacte.TabStop = false;
-            this.Box_contacte.Click += new System.EventHandler(this.Box_contacte_Click);
+            this.leadsPonturiBindingSource.DataMember = "Leads (Ponturi)";
+            //this.leadsPonturiBindingSource.DataSource = this.cRMDataSet_Leads;
             // 
-            // Box_Home
+            // leads__Ponturi_TableAdapter
             // 
-            this.Box_Home.BackgroundImage = global::Proiect_BD.Properties.Resources.button1_Image;
-            this.Box_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Box_Home.Location = new System.Drawing.Point(36, 120);
-            this.Box_Home.Name = "Box_Home";
-            this.Box_Home.Size = new System.Drawing.Size(56, 41);
-            this.Box_Home.TabIndex = 1;
-            this.Box_Home.TabStop = false;
-            this.Box_Home.Click += new System.EventHandler(this.pictureBox2_Click);
+           // this.leads__Ponturi_TableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox1
+            // leadIDDataGridViewTextBoxColumn
             // 
-            this.pictureBox1.BackgroundImage = global::Proiect_BD.Properties.Resources.b1f80662e3a36e85f2ab0b03d4a36177;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 98);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.leadIDDataGridViewTextBoxColumn.DataPropertyName = "Lead_ID";
+            this.leadIDDataGridViewTextBoxColumn.HeaderText = "Lead_ID";
+            this.leadIDDataGridViewTextBoxColumn.Name = "leadIDDataGridViewTextBoxColumn";
+            // 
+            // numeDataGridViewTextBoxColumn
+            // 
+            this.numeDataGridViewTextBoxColumn.DataPropertyName = "Nume";
+            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+            // 
+            // prenumeDataGridViewTextBoxColumn
+            // 
+            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "Prenume";
+            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
+            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
+            // 
+            // nrTelDataGridViewTextBoxColumn
+            // 
+            this.nrTelDataGridViewTextBoxColumn.DataPropertyName = "Nr tel";
+            this.nrTelDataGridViewTextBoxColumn.HeaderText = "Nr tel";
+            this.nrTelDataGridViewTextBoxColumn.Name = "nrTelDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // companieDataGridViewTextBoxColumn
+            // 
+            this.companieDataGridViewTextBoxColumn.DataPropertyName = "Companie";
+            this.companieDataGridViewTextBoxColumn.HeaderText = "Companie";
+            this.companieDataGridViewTextBoxColumn.Name = "companieDataGridViewTextBoxColumn";
+            // 
+            // contactDataGridViewTextBoxColumn
+            // 
+            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
+            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
+            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
             // 
             // Form2
             // 
@@ -380,16 +517,22 @@
             this.panel1.PerformLayout();
             this.Leads.ResumeLayout(false);
             this.Leads.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage_Home.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Calendar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_contacte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage_Home.ResumeLayout(false);
+            this.tabPage_Leads.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet_Leads)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,6 +566,22 @@
         private System.Windows.Forms.Button button_Delete_User;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.BindingSource cRMDataSetBindingSource;
-        private CRMDataSet cRMDataSet;
+       // private CRMDataSet cRMDataSet;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource cRMDataSetBindingSource1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource cRMDataSetBindingSource2;
+       // private CRMDataSet_Leads cRMDataSet_Leads;
+        private System.Windows.Forms.BindingSource leadsPonturiBindingSource;
+        //private CRMDataSet_LeadsTableAdapters.Leads__Ponturi_TableAdapter leads__Ponturi_TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leadIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenumeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrTelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactDataGridViewTextBoxColumn;
     }
 }

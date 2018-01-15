@@ -84,6 +84,22 @@ namespace Proiect_BD
 
         }
 
+        private void textBox_login_user_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                button1_Click(sender,e);
+            }
+        }
+
+        private void textBox_login_pwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
+        }
+
         private void textBox_login_pwd_TextChanged(object sender, EventArgs e)
         {
 
