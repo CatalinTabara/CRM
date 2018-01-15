@@ -76,6 +76,7 @@ namespace Proiect_BD.Resources
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Context.Dispose();
         }
 
         static string sha256(string randomString)
@@ -88,6 +89,11 @@ namespace Proiect_BD.Resources
                 hash.Append(theByte.ToString("x2"));
             }
             return hash.ToString();
+        }
+
+        private void Form_Modify_User_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

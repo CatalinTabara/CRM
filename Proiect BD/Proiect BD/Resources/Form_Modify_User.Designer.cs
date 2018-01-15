@@ -192,6 +192,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Modify_User";
             this.Text = "Form_Modify_User";
+            this.Load += new System.EventHandler(this.Form_Modify_User_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -52,8 +52,8 @@
             this.button_Add_User = new System.Windows.Forms.Button();
             this.tabPage_Leads = new System.Windows.Forms.TabPage();
             this.button_Export = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_DeleteLead = new System.Windows.Forms.Button();
+            this.button_AddLead = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.leadsPonturiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage_Potential = new System.Windows.Forms.TabPage();
@@ -62,6 +62,16 @@
             this.cRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cRMDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cRMDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cRMDataSet = new Proiect_BD.CRMDataSet();
+            this.leadsPonturiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.leads__Ponturi_TableAdapter = new Proiect_BD.CRMDataSetTableAdapters.Leads__Ponturi_TableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.Leads.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).BeginInit();
@@ -78,6 +88,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -325,8 +337,8 @@
             // 
             this.tabPage_Leads.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.tabPage_Leads.Controls.Add(this.button_Export);
-            this.tabPage_Leads.Controls.Add(this.button2);
-            this.tabPage_Leads.Controls.Add(this.button1);
+            this.tabPage_Leads.Controls.Add(this.button_DeleteLead);
+            this.tabPage_Leads.Controls.Add(this.button_AddLead);
             this.tabPage_Leads.Controls.Add(this.dataGridView1);
             this.tabPage_Leads.Location = new System.Drawing.Point(4, 24);
             this.tabPage_Leads.Margin = new System.Windows.Forms.Padding(0);
@@ -346,29 +358,37 @@
             this.button_Export.UseVisualStyleBackColor = true;
             this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
             // 
-            // button2
+            // button_DeleteLead
             // 
-            this.button2.Location = new System.Drawing.Point(147, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Delete Lead";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_DeleteLead.Location = new System.Drawing.Point(147, 169);
+            this.button_DeleteLead.Name = "button_DeleteLead";
+            this.button_DeleteLead.Size = new System.Drawing.Size(75, 23);
+            this.button_DeleteLead.TabIndex = 2;
+            this.button_DeleteLead.Text = "Delete Lead";
+            this.button_DeleteLead.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button_AddLead
             // 
-            this.button1.Location = new System.Drawing.Point(27, 169);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add Lead";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_AddLead.Location = new System.Drawing.Point(27, 169);
+            this.button_AddLead.Name = "button_AddLead";
+            this.button_AddLead.Size = new System.Drawing.Size(86, 23);
+            this.button_AddLead.TabIndex = 1;
+            this.button_AddLead.Text = "Add Lead";
+            this.button_AddLead.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.leadsPonturiBindingSource;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.dataGridView1.DataSource = this.leadsPonturiBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(14, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(467, 135);
@@ -407,6 +427,76 @@
             this.label_Timer.TabIndex = 2;
             this.label_Timer.Text = " ";
             // 
+            // cRMDataSet
+            // 
+            this.cRMDataSet.DataSetName = "CRMDataSet";
+            this.cRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // leadsPonturiBindingSource1
+            // 
+            this.leadsPonturiBindingSource1.DataMember = "Leads (Ponturi)";
+            this.leadsPonturiBindingSource1.DataSource = this.cRMDataSet;
+            // 
+            // leads__Ponturi_TableAdapter
+            // 
+            this.leads__Ponturi_TableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Lead_ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Lead_ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 73;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nume";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nume";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Prenume";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Prenume";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 74;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Nr tel";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Nr tel";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Companie";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Companie";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 79;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Contact";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Contact";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 69;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,6 +531,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,8 +570,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource cRMDataSetBindingSource1;
         private System.Windows.Forms.Button button_Export;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_DeleteLead;
+        private System.Windows.Forms.Button button_AddLead;
         private System.Windows.Forms.BindingSource cRMDataSetBindingSource2;
        // private CRMDataSet_Leads cRMDataSet_Leads;
         private System.Windows.Forms.BindingSource leadsPonturiBindingSource;
@@ -491,5 +583,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contactDataGridViewTextBoxColumn;
+        private CRMDataSet cRMDataSet;
+        private System.Windows.Forms.BindingSource leadsPonturiBindingSource1;
+        private CRMDataSetTableAdapters.Leads__Ponturi_TableAdapter leads__Ponturi_TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

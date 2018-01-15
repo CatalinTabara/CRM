@@ -103,8 +103,10 @@ namespace Proiect_BD
 
         private void Form2_Load_1(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cRMDataSet._Leads__Ponturi_' table. You can move, or remove it, as needed.
+            this.leads__Ponturi_TableAdapter.Fill(this.cRMDataSet._Leads__Ponturi_);
             // TODO: This line of code loads data into the 'cRMDataSet_Leads._Leads__Ponturi_' table. You can move, or remove it, as needed.
-           // this.leads__Ponturi_TableAdapter.Fill(this.cRMDataSet_Leads._Leads__Ponturi_);
+            // this.leads__Ponturi_TableAdapter.Fill(this.cRMDataSet_Leads._Leads__Ponturi_);
 
         }
 
