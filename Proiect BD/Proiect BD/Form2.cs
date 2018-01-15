@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML;
 
 namespace Proiect_BD
 {
@@ -15,9 +16,10 @@ namespace Proiect_BD
     {
         List<Panel> listpanel = new List<Panel>();
         private Timer Timer = new Timer();
-
-        public Form2()
+        Utilizatori user;
+        public Form2(Utilizatori u)
         {
+            this.user = u;
             InitializeComponent();
             tabControl1.SizeMode = TabSizeMode.Fixed;
 
@@ -40,7 +42,6 @@ namespace Proiect_BD
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
-
         }     
             
         private void Box_contacte_Click(object sender, EventArgs e)
@@ -134,5 +135,16 @@ namespace Proiect_BD
         private const int WM_NCHITTEST = 0x84;
         private const int HT_CLIENT = 0x1;
         private const int HT_CAPTION = 0x2;
+
+        private void button_Modify_User_Click(object sender, EventArgs e)
+        {
+            Form f6 = new Form_Modify_User(user);
+            f6.ShowDialog();
+        }
+
+        private void button_Export_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

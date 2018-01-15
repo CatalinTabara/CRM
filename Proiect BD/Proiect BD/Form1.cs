@@ -59,7 +59,7 @@ namespace Proiect_BD
             Context.Dispose();
             if(aux!=null)
             {
-                Form f2 = new Form2();
+                Form f2 = new Form2(aux);
                 this.Hide();
                 f2.ShowDialog();
             }

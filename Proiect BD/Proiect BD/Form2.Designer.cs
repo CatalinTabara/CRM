@@ -51,27 +51,17 @@
             this.button_Show_Users = new System.Windows.Forms.Button();
             this.button_Add_User = new System.Windows.Forms.Button();
             this.tabPage_Leads = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_Export = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.leadsPonturiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage_Potential = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label_Timer = new System.Windows.Forms.Label();
-           // this.cRMDataSet = new Proiect_BD.CRMDataSet();
             this.cRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cRMDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cRMDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            //this.cRMDataSet_Leads = new Proiect_BD.CRMDataSet_Leads();
-            this.leadsPonturiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.leads__Ponturi_TableAdapter = new Proiect_BD.CRMDataSet_LeadsTableAdapters.Leads__Ponturi_TableAdapter();
-            this.leadIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nrTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.Leads.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).BeginInit();
@@ -84,12 +74,10 @@
             this.tabPage_Home.SuspendLayout();
             this.tabPage_Leads.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.cRMDataSet_Leads)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -311,6 +299,7 @@
             this.button_Modify_User.TabIndex = 2;
             this.button_Modify_User.Text = "Modify User";
             this.button_Modify_User.UseVisualStyleBackColor = true;
+            this.button_Modify_User.Click += new System.EventHandler(this.button_Modify_User_Click);
             // 
             // button_Show_Users
             // 
@@ -335,7 +324,7 @@
             // tabPage_Leads
             // 
             this.tabPage_Leads.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tabPage_Leads.Controls.Add(this.button3);
+            this.tabPage_Leads.Controls.Add(this.button_Export);
             this.tabPage_Leads.Controls.Add(this.button2);
             this.tabPage_Leads.Controls.Add(this.button1);
             this.tabPage_Leads.Controls.Add(this.dataGridView1);
@@ -347,14 +336,15 @@
             this.tabPage_Leads.TabIndex = 1;
             this.tabPage_Leads.Text = " ";
             // 
-            // button3
+            // button_Export
             // 
-            this.button3.Location = new System.Drawing.Point(266, 169);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_Export.Location = new System.Drawing.Point(266, 169);
+            this.button_Export.Name = "button_Export";
+            this.button_Export.Size = new System.Drawing.Size(92, 23);
+            this.button_Export.TabIndex = 3;
+            this.button_Export.Text = "Export to Excel";
+            this.button_Export.UseVisualStyleBackColor = true;
+            this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
             // 
             // button2
             // 
@@ -378,19 +368,15 @@
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.leadIDDataGridViewTextBoxColumn,
-            this.numeDataGridViewTextBoxColumn,
-            this.prenumeDataGridViewTextBoxColumn,
-            this.nrTelDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.companieDataGridViewTextBoxColumn,
-            this.contactDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.leadsPonturiBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(14, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(467, 135);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // leadsPonturiBindingSource
+            // 
+            this.leadsPonturiBindingSource.DataMember = "Leads (Ponturi)";
             // 
             // tabPage_Potential
             // 
@@ -420,82 +406,6 @@
             this.label_Timer.Size = new System.Drawing.Size(10, 13);
             this.label_Timer.TabIndex = 2;
             this.label_Timer.Text = " ";
-            // 
-            // cRMDataSet
-            // 
-          //  this.cRMDataSet.DataSetName = "CRMDataSet";
-          //  this.cRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cRMDataSetBindingSource
-            // 
-           // this.cRMDataSetBindingSource.DataSource = this.cRMDataSet;
-          //  this.cRMDataSetBindingSource.Position = 0;
-            // 
-            // cRMDataSetBindingSource1
-            // 
-          //  this.cRMDataSetBindingSource1.DataSource = this.cRMDataSet;
-           // this.cRMDataSetBindingSource1.Position = 0;
-            // 
-            // cRMDataSetBindingSource2
-            // 
-          //  this.cRMDataSetBindingSource2.DataSource = this.cRMDataSet;
-            this.cRMDataSetBindingSource2.Position = 0;
-            // 
-            // cRMDataSet_Leads
-            // 
-            //this.cRMDataSet_Leads.DataSetName = "CRMDataSet_Leads";
-            //this.cRMDataSet_Leads.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // leadsPonturiBindingSource
-            // 
-            this.leadsPonturiBindingSource.DataMember = "Leads (Ponturi)";
-            //this.leadsPonturiBindingSource.DataSource = this.cRMDataSet_Leads;
-            // 
-            // leads__Ponturi_TableAdapter
-            // 
-           // this.leads__Ponturi_TableAdapter.ClearBeforeFill = true;
-            // 
-            // leadIDDataGridViewTextBoxColumn
-            // 
-            this.leadIDDataGridViewTextBoxColumn.DataPropertyName = "Lead_ID";
-            this.leadIDDataGridViewTextBoxColumn.HeaderText = "Lead_ID";
-            this.leadIDDataGridViewTextBoxColumn.Name = "leadIDDataGridViewTextBoxColumn";
-            // 
-            // numeDataGridViewTextBoxColumn
-            // 
-            this.numeDataGridViewTextBoxColumn.DataPropertyName = "Nume";
-            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
-            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
-            // 
-            // prenumeDataGridViewTextBoxColumn
-            // 
-            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "Prenume";
-            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
-            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
-            // 
-            // nrTelDataGridViewTextBoxColumn
-            // 
-            this.nrTelDataGridViewTextBoxColumn.DataPropertyName = "Nr tel";
-            this.nrTelDataGridViewTextBoxColumn.HeaderText = "Nr tel";
-            this.nrTelDataGridViewTextBoxColumn.Name = "nrTelDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // companieDataGridViewTextBoxColumn
-            // 
-            this.companieDataGridViewTextBoxColumn.DataPropertyName = "Companie";
-            this.companieDataGridViewTextBoxColumn.HeaderText = "Companie";
-            this.companieDataGridViewTextBoxColumn.Name = "companieDataGridViewTextBoxColumn";
-            // 
-            // contactDataGridViewTextBoxColumn
-            // 
-            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
-            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
-            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
             // 
             // Form2
             // 
@@ -527,12 +437,10 @@
             this.tabPage_Home.ResumeLayout(false);
             this.tabPage_Leads.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet_Leads)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -569,7 +477,7 @@
        // private CRMDataSet cRMDataSet;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource cRMDataSetBindingSource1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_Export;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource cRMDataSetBindingSource2;
