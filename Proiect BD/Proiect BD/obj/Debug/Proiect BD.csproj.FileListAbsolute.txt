@@ -14,3 +14,15 @@ C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\EntityFramewo
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\EntityFramework.xml
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Resources.Form_Add_User.resources
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Microsoft.SqlServer.Dmf.Adapters.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\MySql.Data.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Microsoft.AnalysisServices.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\MySql.Data.xml
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Resources.Form_Show_Users.resources
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Resources.Form_Delete_User.resources

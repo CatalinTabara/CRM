@@ -94,9 +94,9 @@
             this.label_Add_Grad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.label_Add_Grad.Location = new System.Drawing.Point(1, 187);
             this.label_Add_Grad.Name = "label_Add_Grad";
-            this.label_Add_Grad.Size = new System.Drawing.Size(30, 13);
+            this.label_Add_Grad.Size = new System.Drawing.Size(34, 13);
             this.label_Add_Grad.TabIndex = 4;
-            this.label_Add_Grad.Text = "Grad";
+            this.label_Add_Grad.Text = "Grad*";
             // 
             // textBox_Add_Nume
             // 
@@ -201,7 +201,6 @@
             // 
             this.textBox_Add_Phone.Location = new System.Drawing.Point(98, 124);
             this.textBox_Add_Phone.Name = "textBox_Add_Phone";
-            this.textBox_Add_Phone.PasswordChar = '*';
             this.textBox_Add_Phone.Size = new System.Drawing.Size(100, 20);
             this.textBox_Add_Phone.TabIndex = 15;
             // 

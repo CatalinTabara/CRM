@@ -51,11 +51,11 @@ namespace Proiect_BD
         private void button1_Click(object sender, EventArgs e)
         {
             user = textBox_login_user.Text;
-            pwd = sha256(textBox_login_pwd.Text);
+            pwd = sha256(textBox_login_pwd.ToString());
             
             Model_CRM Context = new Model_CRM();
             
-            Utilizatori aux = Context.Utilizatoris.Where(x => x.Username == user && x.Password == textBox_login_pwd.Text).FirstOrDefault();
+            Utilizatori aux = Context.Utilizatoris.Where(x => x.Username == user && x.Password == pwd).FirstOrDefault();
             Context.Dispose();
             if(aux!=null)
             {

@@ -34,16 +34,10 @@
             this.Leads = new System.Windows.Forms.Panel();
             this.Page2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.Box_Potential = new System.Windows.Forms.PictureBox();
             this.label_Calendar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Leads = new System.Windows.Forms.Label();
             this.label_Home = new System.Windows.Forms.Label();
-            this.Box_Exit = new System.Windows.Forms.PictureBox();
-            this.Box_Calendar = new System.Windows.Forms.PictureBox();
-            this.Box_contacte = new System.Windows.Forms.PictureBox();
-            this.Box_Home = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Home = new System.Windows.Forms.TabPage();
             this.button_Delete_User = new System.Windows.Forms.Button();
@@ -56,18 +50,24 @@
             this.label_Timer = new System.Windows.Forms.Label();
             this.cRMDataSet = new Proiect_BD.CRMDataSet();
             this.cRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Box_Potential = new System.Windows.Forms.PictureBox();
+            this.Box_Exit = new System.Windows.Forms.PictureBox();
+            this.Box_Calendar = new System.Windows.Forms.PictureBox();
+            this.Box_contacte = new System.Windows.Forms.PictureBox();
+            this.Box_Home = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.Leads.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage_Home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Calendar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_contacte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage_Home.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,17 +125,6 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 0;
             // 
-            // Box_Potential
-            // 
-            this.Box_Potential.BackgroundImage = global::Proiect_BD.Properties.Resources.button4_Image;
-            this.Box_Potential.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Box_Potential.Location = new System.Drawing.Point(36, 260);
-            this.Box_Potential.Name = "Box_Potential";
-            this.Box_Potential.Size = new System.Drawing.Size(56, 41);
-            this.Box_Potential.TabIndex = 1;
-            this.Box_Potential.TabStop = false;
-            this.Box_Potential.Click += new System.EventHandler(this.Box_Potential_Click);
-            // 
             // label_Calendar
             // 
             this.label_Calendar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -184,61 +173,6 @@
             this.label_Home.TabIndex = 0;
             this.label_Home.Text = "Home";
             // 
-            // Box_Exit
-            // 
-            this.Box_Exit.BackgroundImage = global::Proiect_BD.Properties.Resources.shutdown_button_png_image_98694;
-            this.Box_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Box_Exit.Location = new System.Drawing.Point(36, 411);
-            this.Box_Exit.Name = "Box_Exit";
-            this.Box_Exit.Size = new System.Drawing.Size(56, 41);
-            this.Box_Exit.TabIndex = 4;
-            this.Box_Exit.TabStop = false;
-            this.Box_Exit.Click += new System.EventHandler(this.Box_Exit_Click);
-            // 
-            // Box_Calendar
-            // 
-            this.Box_Calendar.BackgroundImage = global::Proiect_BD.Properties.Resources.button3_Image;
-            this.Box_Calendar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Box_Calendar.Location = new System.Drawing.Point(36, 335);
-            this.Box_Calendar.Name = "Box_Calendar";
-            this.Box_Calendar.Size = new System.Drawing.Size(56, 41);
-            this.Box_Calendar.TabIndex = 3;
-            this.Box_Calendar.TabStop = false;
-            this.Box_Calendar.Click += new System.EventHandler(this.Box_Calendar_Click);
-            // 
-            // Box_contacte
-            // 
-            this.Box_contacte.BackgroundImage = global::Proiect_BD.Properties.Resources.button2_Image;
-            this.Box_contacte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Box_contacte.Location = new System.Drawing.Point(36, 191);
-            this.Box_contacte.Name = "Box_contacte";
-            this.Box_contacte.Size = new System.Drawing.Size(56, 41);
-            this.Box_contacte.TabIndex = 2;
-            this.Box_contacte.TabStop = false;
-            this.Box_contacte.Click += new System.EventHandler(this.Box_contacte_Click);
-            // 
-            // Box_Home
-            // 
-            this.Box_Home.BackgroundImage = global::Proiect_BD.Properties.Resources.button1_Image;
-            this.Box_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Box_Home.Location = new System.Drawing.Point(36, 120);
-            this.Box_Home.Name = "Box_Home";
-            this.Box_Home.Size = new System.Drawing.Size(56, 41);
-            this.Box_Home.TabIndex = 1;
-            this.Box_Home.TabStop = false;
-            this.Box_Home.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Proiect_BD.Properties.Resources.b1f80662e3a36e85f2ab0b03d4a36177;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 98);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // tabControl1
             // 
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
@@ -279,6 +213,7 @@
             this.button_Delete_User.TabIndex = 3;
             this.button_Delete_User.Text = "Delete User";
             this.button_Delete_User.UseVisualStyleBackColor = true;
+            this.button_Delete_User.Click += new System.EventHandler(this.button_Delete_User_Click);
             // 
             // button_Modify_User
             // 
@@ -359,6 +294,72 @@
             this.cRMDataSetBindingSource.DataSource = this.cRMDataSet;
             this.cRMDataSetBindingSource.Position = 0;
             // 
+            // Box_Potential
+            // 
+            this.Box_Potential.BackgroundImage = global::Proiect_BD.Properties.Resources.button4_Image;
+            this.Box_Potential.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Box_Potential.Location = new System.Drawing.Point(36, 260);
+            this.Box_Potential.Name = "Box_Potential";
+            this.Box_Potential.Size = new System.Drawing.Size(56, 41);
+            this.Box_Potential.TabIndex = 1;
+            this.Box_Potential.TabStop = false;
+            this.Box_Potential.Click += new System.EventHandler(this.Box_Potential_Click);
+            // 
+            // Box_Exit
+            // 
+            this.Box_Exit.BackgroundImage = global::Proiect_BD.Properties.Resources.shutdown_button_png_image_98694;
+            this.Box_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Box_Exit.Location = new System.Drawing.Point(36, 411);
+            this.Box_Exit.Name = "Box_Exit";
+            this.Box_Exit.Size = new System.Drawing.Size(56, 41);
+            this.Box_Exit.TabIndex = 4;
+            this.Box_Exit.TabStop = false;
+            this.Box_Exit.Click += new System.EventHandler(this.Box_Exit_Click);
+            // 
+            // Box_Calendar
+            // 
+            this.Box_Calendar.BackgroundImage = global::Proiect_BD.Properties.Resources.button3_Image;
+            this.Box_Calendar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Box_Calendar.Location = new System.Drawing.Point(36, 335);
+            this.Box_Calendar.Name = "Box_Calendar";
+            this.Box_Calendar.Size = new System.Drawing.Size(56, 41);
+            this.Box_Calendar.TabIndex = 3;
+            this.Box_Calendar.TabStop = false;
+            this.Box_Calendar.Click += new System.EventHandler(this.Box_Calendar_Click);
+            // 
+            // Box_contacte
+            // 
+            this.Box_contacte.BackgroundImage = global::Proiect_BD.Properties.Resources.button2_Image;
+            this.Box_contacte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Box_contacte.Location = new System.Drawing.Point(36, 191);
+            this.Box_contacte.Name = "Box_contacte";
+            this.Box_contacte.Size = new System.Drawing.Size(56, 41);
+            this.Box_contacte.TabIndex = 2;
+            this.Box_contacte.TabStop = false;
+            this.Box_contacte.Click += new System.EventHandler(this.Box_contacte_Click);
+            // 
+            // Box_Home
+            // 
+            this.Box_Home.BackgroundImage = global::Proiect_BD.Properties.Resources.button1_Image;
+            this.Box_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Box_Home.Location = new System.Drawing.Point(36, 120);
+            this.Box_Home.Name = "Box_Home";
+            this.Box_Home.Size = new System.Drawing.Size(56, 41);
+            this.Box_Home.TabIndex = 1;
+            this.Box_Home.TabStop = false;
+            this.Box_Home.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Proiect_BD.Properties.Resources.b1f80662e3a36e85f2ab0b03d4a36177;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 98);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,20 +375,21 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Leads.ResumeLayout(false);
             this.Leads.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage_Home.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Calendar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_contacte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage_Home.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

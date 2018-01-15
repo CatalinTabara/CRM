@@ -23,7 +23,7 @@ namespace Proiect_BD
 
 
 
-            connection.Open();
+            //connection.Open();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

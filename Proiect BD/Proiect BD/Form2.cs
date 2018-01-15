@@ -115,7 +115,19 @@ namespace Proiect_BD
 
         private void button_Show_Users_Click(object sender, EventArgs e)
         {
+            Form f4 = new Form_Show_Users();
+            f4.ShowDialog();
+        }
 
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Delete_User_Click(object sender, EventArgs e)
+        {
+            Form f5 = new Form_Delete_User();
+            f5.ShowDialog();
         }
     }
 }
