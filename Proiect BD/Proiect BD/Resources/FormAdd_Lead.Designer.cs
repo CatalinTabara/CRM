@@ -38,10 +38,10 @@
             this.label_Data = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox_Nume = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_Prenume = new System.Windows.Forms.TextBox();
+            this.textBox_Telefon = new System.Windows.Forms.TextBox();
+            this.textBox_email = new System.Windows.Forms.TextBox();
+            this.textBox_companie = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button_Cancel
@@ -62,6 +62,7 @@
             this.button_AddLead.TabIndex = 1;
             this.button_AddLead.Text = "Add";
             this.button_AddLead.UseVisualStyleBackColor = true;
+            this.button_AddLead.Click += new System.EventHandler(this.button_AddLead_Click);
             // 
             // label_Nume
             // 
@@ -69,9 +70,9 @@
             this.label_Nume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.label_Nume.Location = new System.Drawing.Point(17, 24);
             this.label_Nume.Name = "label_Nume";
-            this.label_Nume.Size = new System.Drawing.Size(35, 13);
+            this.label_Nume.Size = new System.Drawing.Size(39, 13);
             this.label_Nume.TabIndex = 2;
-            this.label_Nume.Text = "Nume";
+            this.label_Nume.Text = "Nume*";
             // 
             // label_Prenume
             // 
@@ -79,9 +80,9 @@
             this.label_Prenume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.label_Prenume.Location = new System.Drawing.Point(17, 50);
             this.label_Prenume.Name = "label_Prenume";
-            this.label_Prenume.Size = new System.Drawing.Size(49, 13);
+            this.label_Prenume.Size = new System.Drawing.Size(53, 13);
             this.label_Prenume.TabIndex = 3;
-            this.label_Prenume.Text = "Prenume";
+            this.label_Prenume.Text = "Prenume*";
             // 
             // label_Telefon
             // 
@@ -138,33 +139,34 @@
             this.textBox_Nume.Size = new System.Drawing.Size(100, 20);
             this.textBox_Nume.TabIndex = 9;
             // 
-            // textBox1
+            // textBox_Prenume
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.textBox_Prenume.Location = new System.Drawing.Point(148, 47);
+            this.textBox_Prenume.Name = "textBox_Prenume";
+            this.textBox_Prenume.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Prenume.TabIndex = 10;
             // 
-            // textBox2
+            // textBox_Telefon
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.textBox_Telefon.Location = new System.Drawing.Point(148, 73);
+            this.textBox_Telefon.Name = "textBox_Telefon";
+            this.textBox_Telefon.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Telefon.TabIndex = 11;
+            this.textBox_Telefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Telefon_KeyPress);
             // 
-            // textBox3
+            // textBox_email
             // 
-            this.textBox3.Location = new System.Drawing.Point(148, 99);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.textBox_email.Location = new System.Drawing.Point(148, 99);
+            this.textBox_email.Name = "textBox_email";
+            this.textBox_email.Size = new System.Drawing.Size(100, 20);
+            this.textBox_email.TabIndex = 12;
             // 
-            // textBox4
+            // textBox_companie
             // 
-            this.textBox4.Location = new System.Drawing.Point(148, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 13;
+            this.textBox_companie.Location = new System.Drawing.Point(148, 125);
+            this.textBox_companie.Name = "textBox_companie";
+            this.textBox_companie.Size = new System.Drawing.Size(100, 20);
+            this.textBox_companie.TabIndex = 13;
             // 
             // FormAdd_Lead
             // 
@@ -172,10 +174,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(302, 249);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_companie);
+            this.Controls.Add(this.textBox_email);
+            this.Controls.Add(this.textBox_Telefon);
+            this.Controls.Add(this.textBox_Prenume);
             this.Controls.Add(this.textBox_Nume);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label_Data);
@@ -206,9 +208,9 @@
         private System.Windows.Forms.Label label_Data;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox_Nume;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_Prenume;
+        private System.Windows.Forms.TextBox textBox_Telefon;
+        private System.Windows.Forms.TextBox textBox_email;
+        private System.Windows.Forms.TextBox textBox_companie;
     }
 }

@@ -33,7 +33,7 @@ namespace Proiect_BD.Resources
                 if(ID> Convert.ToInt32(textBox1.Text))
                 {
                     int E_ID = Convert.ToInt32(textBox1.Text);
-                    var itemToRemove = Context.Utilizatoris.SingleOrDefault(x => x.Employee_ID == E_ID); //returns a single item.
+                    var itemToRemove = Context.Utilizatoris.SingleOrDefault(x => x.Employee_ID == E_ID); 
 
                     if (itemToRemove != null)
                     {

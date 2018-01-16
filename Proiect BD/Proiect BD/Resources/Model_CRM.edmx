@@ -18,13 +18,13 @@ warning 6002: The table/view 'CRM.dbo.Evenimente' does not have a primary key de
           <Property Name="Responsabil_Nume" Type="nchar" MaxLength="18" Nullable="false" />
           <Property Name="Responsabil_Prenume" Type="nchar" MaxLength="18" />
           <Property Name="Data" Type="date" Nullable="false" />
-          <Property Name="Lead_ID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Lead_ID" Type="int" />
         </EntityType>
         <EntityType Name="Leads (Ponturi)">
           <Key>
             <PropertyRef Name="Lead_ID" />
           </Key>
-          <Property Name="Lead_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Lead_ID" Type="int" Nullable="false" />
           <Property Name="Nume" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Prenume" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Nr tel" Type="numeric" Precision="18" Scale="0" />
@@ -42,7 +42,7 @@ warning 6002: The table/view 'CRM.dbo.Potential(client)' does not have a primary
             <PropertyRef Name="Task" />
             <PropertyRef Name="Caretaker" />
           </Key>
-          <Property Name="Lead_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Lead_ID" Type="int" Nullable="false" />
           <Property Name="Nume" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Prenume" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Task" Type="nchar" MaxLength="10" Nullable="false" />
@@ -141,7 +141,7 @@ warning 6002: The table/view 'CRM.dbo.Potential(client)' does not have a primary
           <Key>
             <PropertyRef Name="Lead_ID" />
           </Key>
-          <Property Name="Lead_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Lead_ID" Type="Decimal" Nullable="false" />
           <Property Name="Nume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Prenume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Nr_tel" Type="Decimal" Precision="18" Scale="0" />
@@ -175,7 +175,7 @@ warning 6002: The table/view 'CRM.dbo.Potential(client)' does not have a primary
           <Property Name="Responsabil_Nume" Type="String" MaxLength="18" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Responsabil_Prenume" Type="String" MaxLength="18" FixedLength="true" Unicode="true" />
           <Property Name="Data" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Lead_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Lead_ID" Type="Decimal" />
           <NavigationProperty Name="Leads__Ponturi_" Relationship="Self.FK_Evenimente_Leads__Ponturi_" FromRole="Evenimente" ToRole="Leads__Ponturi_" />
         </EntityType>
         <EntityType Name="Potential_client_">
@@ -186,7 +186,7 @@ warning 6002: The table/view 'CRM.dbo.Potential(client)' does not have a primary
             <PropertyRef Name="Task" />
             <PropertyRef Name="Caretaker" />
           </Key>
-          <Property Name="Lead_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Lead_ID" Type="Decimal" Nullable="false" />
           <Property Name="Nume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Prenume" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Task" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />

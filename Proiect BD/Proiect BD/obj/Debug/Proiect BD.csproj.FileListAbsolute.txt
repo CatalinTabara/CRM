@@ -63,3 +63,5 @@ C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\ClosedXML.pdb
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\ClosedXML.xml
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Resources.Form_Modify_User.resources
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Resources.FormAdd_Lead.resources
+C:\Users\Catalin\Documents\GIT\CRM\Proiect BD\Proiect BD\obj\Debug\Proiect_BD.Resources.Form_Delete_Lead.resources

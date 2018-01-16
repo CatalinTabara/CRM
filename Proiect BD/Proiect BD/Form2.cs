@@ -17,6 +17,7 @@ namespace Proiect_BD
         List<Panel> listpanel = new List<Panel>();
         private Timer Timer = new Timer();
         Utilizatori user;
+
         public Form2(Utilizatori u)
         {
             this.user = u;
@@ -26,11 +27,16 @@ namespace Proiect_BD
             Timer.Interval = 1000;
             Timer.Tick += new EventHandler(Timer_Tick);
             Timer.Start();
+           
+        }
+
+        public void loaddata()
+        {
+        
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
            
         }
 
@@ -75,7 +81,6 @@ namespace Proiect_BD
         {
 
         }
-
 
         private void button_Add_User_Click(object sender, EventArgs e)
         {
@@ -125,6 +130,9 @@ namespace Proiect_BD
         void Timer_Tick(object sender, EventArgs e)
         {
             label_Timer.Text = DateTime.Now.ToString("HH:mm:ss");
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            this.Refresh();
         }
 
         protected override void WndProc(ref Message m)
@@ -147,6 +155,18 @@ namespace Proiect_BD
         private void button_Export_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_AddLead_Click(object sender, EventArgs e)
+        {
+            Form f7 = new FormAdd_Lead(user);
+            f7.ShowDialog();
+        }
+
+        private void button_DeleteLead_Click(object sender, EventArgs e)
+        {
+            Form f8 = new Form_Delete_Lead();
+            f8.ShowDialog();
         }
     }
 }

@@ -55,16 +55,6 @@
             this.button_DeleteLead = new System.Windows.Forms.Button();
             this.button_AddLead = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.leadsPonturiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage_Potential = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label_Timer = new System.Windows.Forms.Label();
-            this.cRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cRMDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cRMDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.cRMDataSet = new Proiect_BD.CRMDataSet();
-            this.leadsPonturiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.leads__Ponturi_TableAdapter = new Proiect_BD.CRMDataSetTableAdapters.Leads__Ponturi_TableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +62,16 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leadsPonturiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cRMDataSet = new Proiect_BD.CRMDataSet();
+            this.tabPage_Potential = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.leadsPonturiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label_Timer = new System.Windows.Forms.Label();
+            this.cRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cRMDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cRMDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.leads__Ponturi_TableAdapter = new Proiect_BD.CRMDataSetTableAdapters.Leads__Ponturi_TableAdapter();
             this.panel1.SuspendLayout();
             this.Leads.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).BeginInit();
@@ -84,12 +84,12 @@
             this.tabPage_Home.SuspendLayout();
             this.tabPage_Leads.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -366,6 +366,7 @@
             this.button_DeleteLead.TabIndex = 2;
             this.button_DeleteLead.Text = "Delete Lead";
             this.button_DeleteLead.UseVisualStyleBackColor = true;
+            this.button_DeleteLead.Click += new System.EventHandler(this.button_DeleteLead_Click);
             // 
             // button_AddLead
             // 
@@ -375,6 +376,7 @@
             this.button_AddLead.TabIndex = 1;
             this.button_AddLead.Text = "Add Lead";
             this.button_AddLead.UseVisualStyleBackColor = true;
+            this.button_AddLead.Click += new System.EventHandler(this.button_AddLead_Click);
             // 
             // dataGridView1
             // 
@@ -393,53 +395,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(467, 135);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // leadsPonturiBindingSource
-            // 
-            this.leadsPonturiBindingSource.DataMember = "Leads (Ponturi)";
-            // 
-            // tabPage_Potential
-            // 
-            this.tabPage_Potential.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tabPage_Potential.Location = new System.Drawing.Point(4, 24);
-            this.tabPage_Potential.Name = "tabPage_Potential";
-            this.tabPage_Potential.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Potential.Size = new System.Drawing.Size(487, 311);
-            this.tabPage_Potential.TabIndex = 2;
-            this.tabPage_Potential.Text = " ";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(487, 311);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = " ";
-            // 
-            // label_Timer
-            // 
-            this.label_Timer.AutoSize = true;
-            this.label_Timer.Location = new System.Drawing.Point(153, 9);
-            this.label_Timer.Name = "label_Timer";
-            this.label_Timer.Size = new System.Drawing.Size(10, 13);
-            this.label_Timer.TabIndex = 2;
-            this.label_Timer.Text = " ";
-            // 
-            // cRMDataSet
-            // 
-            this.cRMDataSet.DataSetName = "CRMDataSet";
-            this.cRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // leadsPonturiBindingSource1
-            // 
-            this.leadsPonturiBindingSource1.DataMember = "Leads (Ponturi)";
-            this.leadsPonturiBindingSource1.DataSource = this.cRMDataSet;
-            // 
-            // leads__Ponturi_TableAdapter
-            // 
-            this.leads__Ponturi_TableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -497,6 +452,53 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 69;
             // 
+            // leadsPonturiBindingSource1
+            // 
+            this.leadsPonturiBindingSource1.DataMember = "Leads (Ponturi)";
+            this.leadsPonturiBindingSource1.DataSource = this.cRMDataSet;
+            // 
+            // cRMDataSet
+            // 
+            this.cRMDataSet.DataSetName = "CRMDataSet";
+            this.cRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage_Potential
+            // 
+            this.tabPage_Potential.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage_Potential.Location = new System.Drawing.Point(4, 24);
+            this.tabPage_Potential.Name = "tabPage_Potential";
+            this.tabPage_Potential.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Potential.Size = new System.Drawing.Size(487, 311);
+            this.tabPage_Potential.TabIndex = 2;
+            this.tabPage_Potential.Text = " ";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(487, 311);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = " ";
+            // 
+            // leadsPonturiBindingSource
+            // 
+            this.leadsPonturiBindingSource.DataMember = "Leads (Ponturi)";
+            // 
+            // label_Timer
+            // 
+            this.label_Timer.AutoSize = true;
+            this.label_Timer.Location = new System.Drawing.Point(153, 9);
+            this.label_Timer.Name = "label_Timer";
+            this.label_Timer.Size = new System.Drawing.Size(10, 13);
+            this.label_Timer.TabIndex = 2;
+            this.label_Timer.Text = " ";
+            // 
+            // leads__Ponturi_TableAdapter
+            // 
+            this.leads__Ponturi_TableAdapter.ClearBeforeFill = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,12 +529,12 @@
             this.tabPage_Home.ResumeLayout(false);
             this.tabPage_Leads.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

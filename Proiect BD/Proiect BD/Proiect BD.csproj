@@ -116,6 +116,12 @@
     <Compile Include="Resources\Form_Add_User.Designer.cs">
       <DependentUpon>Form_Add_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Form_Delete_Lead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form_Delete_Lead.Designer.cs">
+      <DependentUpon>Form_Delete_Lead.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Form_Delete_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Form_Add_User.resx">
       <DependentUpon>Form_Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Form_Delete_Lead.resx">
+      <DependentUpon>Form_Delete_Lead.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Form_Delete_User.resx">
       <DependentUpon>Form_Delete_User.cs</DependentUpon>
