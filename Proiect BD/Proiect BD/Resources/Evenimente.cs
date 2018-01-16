@@ -19,7 +19,7 @@ namespace Proiect_BD.Resources
         public string Responsabil_Nume { get; set; }
         public string Responsabil_Prenume { get; set; }
         public System.DateTime Data { get; set; }
-        public Nullable<decimal> Lead_ID { get; set; }
+        public Nullable<int> Lead_ID { get; set; }
     
         public virtual Leads__Ponturi_ Leads__Ponturi_ { get; set; }
     }

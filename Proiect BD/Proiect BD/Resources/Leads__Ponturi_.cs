@@ -21,7 +21,7 @@ namespace Proiect_BD.Resources
             this.Potential_client_ = new HashSet<Potential_client_>();
         }
     
-        public decimal Lead_ID { get; set; }
+        public int Lead_ID { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
         public Nullable<decimal> Nr_tel { get; set; }

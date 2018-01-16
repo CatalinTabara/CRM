@@ -39,8 +39,9 @@ namespace Proiect_BD.Resources
             Leads__Ponturi_ user = new Leads__Ponturi_();
             try
             {
-                ID = Convert.ToInt32(Context.Leads__Ponturi_.Max(s => s.Lead_ID));
-                if (ID > Convert.ToInt32(textBox_ID.Text))
+                int L_ID = Convert.ToInt32(textBox_ID.Text);
+                user = Context.Leads__Ponturi_.Where(s => s.Lead_ID == L_ID ).FirstOrDefault();
+                if (user!=null)
                 {
                     int E_ID = Convert.ToInt32(textBox_ID.Text);
                     var itemToRemove = Context.Leads__Ponturi_.SingleOrDefault(x => x.Lead_ID == E_ID);
@@ -62,6 +63,11 @@ namespace Proiect_BD.Resources
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Form_Delete_Lead_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

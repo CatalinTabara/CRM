@@ -32,16 +32,16 @@
             this.button_AddLead = new System.Windows.Forms.Button();
             this.label_Nume = new System.Windows.Forms.Label();
             this.label_Prenume = new System.Windows.Forms.Label();
-            this.label_Telefon = new System.Windows.Forms.Label();
-            this.label_Email = new System.Windows.Forms.Label();
-            this.label_Companie = new System.Windows.Forms.Label();
             this.label_Data = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox_Nume = new System.Windows.Forms.TextBox();
             this.textBox_Prenume = new System.Windows.Forms.TextBox();
             this.textBox_Telefon = new System.Windows.Forms.TextBox();
-            this.textBox_email = new System.Windows.Forms.TextBox();
+            this.label_Telefon = new System.Windows.Forms.Label();
+            this.label_Companie = new System.Windows.Forms.Label();
+            this.label_email = new System.Windows.Forms.Label();
             this.textBox_companie = new System.Windows.Forms.TextBox();
+            this.textBox_email = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button_Cancel
@@ -84,36 +84,6 @@
             this.label_Prenume.TabIndex = 3;
             this.label_Prenume.Text = "Prenume*";
             // 
-            // label_Telefon
-            // 
-            this.label_Telefon.AutoSize = true;
-            this.label_Telefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.label_Telefon.Location = new System.Drawing.Point(17, 76);
-            this.label_Telefon.Name = "label_Telefon";
-            this.label_Telefon.Size = new System.Drawing.Size(43, 13);
-            this.label_Telefon.TabIndex = 4;
-            this.label_Telefon.Text = "Telefon";
-            // 
-            // label_Email
-            // 
-            this.label_Email.AutoSize = true;
-            this.label_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.label_Email.Location = new System.Drawing.Point(17, 102);
-            this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(32, 13);
-            this.label_Email.TabIndex = 5;
-            this.label_Email.Text = "Email";
-            // 
-            // label_Companie
-            // 
-            this.label_Companie.AutoSize = true;
-            this.label_Companie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.label_Companie.Location = new System.Drawing.Point(17, 128);
-            this.label_Companie.Name = "label_Companie";
-            this.label_Companie.Size = new System.Drawing.Size(54, 13);
-            this.label_Companie.TabIndex = 6;
-            this.label_Companie.Text = "Companie";
-            // 
             // label_Data
             // 
             this.label_Data.AutoSize = true;
@@ -152,21 +122,50 @@
             this.textBox_Telefon.Name = "textBox_Telefon";
             this.textBox_Telefon.Size = new System.Drawing.Size(100, 20);
             this.textBox_Telefon.TabIndex = 11;
-            this.textBox_Telefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Telefon_KeyPress);
             // 
-            // textBox_email
+            // label_Telefon
             // 
-            this.textBox_email.Location = new System.Drawing.Point(148, 99);
-            this.textBox_email.Name = "textBox_email";
-            this.textBox_email.Size = new System.Drawing.Size(100, 20);
-            this.textBox_email.TabIndex = 12;
+            this.label_Telefon.AutoSize = true;
+            this.label_Telefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.label_Telefon.Location = new System.Drawing.Point(17, 76);
+            this.label_Telefon.Name = "label_Telefon";
+            this.label_Telefon.Size = new System.Drawing.Size(43, 13);
+            this.label_Telefon.TabIndex = 12;
+            this.label_Telefon.Text = "Telefon";
+            // 
+            // label_Companie
+            // 
+            this.label_Companie.AutoSize = true;
+            this.label_Companie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.label_Companie.Location = new System.Drawing.Point(17, 102);
+            this.label_Companie.Name = "label_Companie";
+            this.label_Companie.Size = new System.Drawing.Size(54, 13);
+            this.label_Companie.TabIndex = 13;
+            this.label_Companie.Text = "Companie";
+            // 
+            // label_email
+            // 
+            this.label_email.AutoSize = true;
+            this.label_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.label_email.Location = new System.Drawing.Point(17, 128);
+            this.label_email.Name = "label_email";
+            this.label_email.Size = new System.Drawing.Size(32, 13);
+            this.label_email.TabIndex = 14;
+            this.label_email.Text = "Email";
             // 
             // textBox_companie
             // 
-            this.textBox_companie.Location = new System.Drawing.Point(148, 125);
+            this.textBox_companie.Location = new System.Drawing.Point(148, 99);
             this.textBox_companie.Name = "textBox_companie";
             this.textBox_companie.Size = new System.Drawing.Size(100, 20);
-            this.textBox_companie.TabIndex = 13;
+            this.textBox_companie.TabIndex = 15;
+            // 
+            // textBox_email
+            // 
+            this.textBox_email.Location = new System.Drawing.Point(148, 125);
+            this.textBox_email.Name = "textBox_email";
+            this.textBox_email.Size = new System.Drawing.Size(100, 20);
+            this.textBox_email.TabIndex = 16;
             // 
             // FormAdd_Lead
             // 
@@ -174,16 +173,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(302, 249);
-            this.Controls.Add(this.textBox_companie);
             this.Controls.Add(this.textBox_email);
+            this.Controls.Add(this.textBox_companie);
+            this.Controls.Add(this.label_email);
+            this.Controls.Add(this.label_Companie);
+            this.Controls.Add(this.label_Telefon);
             this.Controls.Add(this.textBox_Telefon);
             this.Controls.Add(this.textBox_Prenume);
             this.Controls.Add(this.textBox_Nume);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label_Data);
-            this.Controls.Add(this.label_Companie);
-            this.Controls.Add(this.label_Email);
-            this.Controls.Add(this.label_Telefon);
             this.Controls.Add(this.label_Prenume);
             this.Controls.Add(this.label_Nume);
             this.Controls.Add(this.button_AddLead);
@@ -191,6 +190,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAdd_Lead";
             this.Text = "FormAdd_Lead";
+            this.Load += new System.EventHandler(this.FormAdd_Lead_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,15 +202,15 @@
         private System.Windows.Forms.Button button_AddLead;
         private System.Windows.Forms.Label label_Nume;
         private System.Windows.Forms.Label label_Prenume;
-        private System.Windows.Forms.Label label_Telefon;
-        private System.Windows.Forms.Label label_Email;
-        private System.Windows.Forms.Label label_Companie;
         private System.Windows.Forms.Label label_Data;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox_Nume;
         private System.Windows.Forms.TextBox textBox_Prenume;
         private System.Windows.Forms.TextBox textBox_Telefon;
-        private System.Windows.Forms.TextBox textBox_email;
+        private System.Windows.Forms.Label label_Telefon;
+        private System.Windows.Forms.Label label_Companie;
+        private System.Windows.Forms.Label label_email;
         private System.Windows.Forms.TextBox textBox_companie;
+        private System.Windows.Forms.TextBox textBox_email;
     }
 }

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CRM.dbo.Evenimente' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Evenimente">
+    <Key>
+      <PropertyRef Name="Tip" />
+      <PropertyRef Name="Responsabil_Nume" />
+      <PropertyRef Name="Data" />
+    </Key>
+    <Property Name="Tip" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Mesaj" Type="nchar" MaxLength="50" />
+    <Property Name="Responsabil_Nume" Type="nchar" MaxLength="18" Nullable="false" />
+    <Property Name="Responsabil_Prenume" Type="nchar" MaxLength="18" />
+    <Property Name="Data" Type="date" Nullable="false" />
+    <Property Name="Lead_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Leads (Ponturi)">
+    <Key>
+      <PropertyRef Name="Lead_ID" />
+    </Key>
+    <Property Name="Lead_ID" Type="int" Nullable="false" />
+    <Property Name="Nume" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Prenume" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nr tel" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Email" Type="nchar" MaxLength="25" />
+    <Property Name="Companie" Type="nchar" MaxLength="15" />
+    <Property Name="Contact" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CRM.dbo.Potential(client)' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Potential(client)">
+    <Key>
+      <PropertyRef Name="Lead_ID" />
+      <PropertyRef Name="Nume" />
+      <PropertyRef Name="Prenume" />
+      <PropertyRef Name="Task" />
+      <PropertyRef Name="Caretaker" />
+    </Key>
+    <Property Name="Lead_ID" Type="int" Nullable="false" />
+    <Property Name="Nume" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Prenume" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Task" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Caretaker" Type="int" Nullable="false" />
+    <Property Name="Data inchiere contract" Type="date" />
+  </EntityType>
+  <EntityType Name="Utilizatori">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Nume" Type="nchar" MaxLength="10" />
+    <Property Name="Prenume" Type="nchar" MaxLength="10" />
+    <Property Name="Username" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="128" Nullable="false" />
+    <Property Name="Grad" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Employee_ID" Type="int" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Evenimente_Leads (Ponturi)">
+    <End Role="Leads (Ponturi)" Type="Self.Leads (Ponturi)" Multiplicity="0..1" />
+    <End Role="Evenimente" Type="Self.Evenimente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads (Ponturi)">
+        <PropertyRef Name="Lead_ID" />
+      </Principal>
+      <Dependent Role="Evenimente">
+        <PropertyRef Name="Lead_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Potential(client)_Leads (Ponturi)">
+    <End Role="Leads (Ponturi)" Type="Self.Leads (Ponturi)" Multiplicity="1" />
+    <End Role="Potential(client)" Type="Self.Potential(client)" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads (Ponturi)">
+        <PropertyRef Name="Lead_ID" />
+      </Principal>
+      <Dependent Role="Potential(client)">
+        <PropertyRef Name="Lead_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Potential(client)_Utilizatori">
+    <End Role="Utilizatori" Type="Self.Utilizatori" Multiplicity="1" />
+    <End Role="Potential(client)" Type="Self.Potential(client)" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizatori">
+        <PropertyRef Name="Employee_ID" />
+      </Principal>
+      <Dependent Role="Potential(client)">
+        <PropertyRef Name="Caretaker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CRMModelStoreContainer">
+    <EntitySet Name="Leads (Ponturi)" EntityType="Self.Leads (Ponturi)" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Utilizatori" EntityType="Self.Utilizatori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Evenimente" EntityType="Self.Evenimente" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Evenimente].[Tip] AS [Tip], 
+    [Evenimente].[Mesaj] AS [Mesaj], 
+    [Evenimente].[Responsabil_Nume] AS [Responsabil_Nume], 
+    [Evenimente].[Responsabil_Prenume] AS [Responsabil_Prenume], 
+    [Evenimente].[Data] AS [Data], 
+    [Evenimente].[Lead_ID] AS [Lead_ID]
+    FROM [dbo].[Evenimente] AS [Evenimente]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Potential(client)" EntityType="Self.Potential(client)" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Potential(client)].[Lead_ID] AS [Lead_ID], 
+    [Potential(client)].[Nume] AS [Nume], 
+    [Potential(client)].[Prenume] AS [Prenume], 
+    [Potential(client)].[Task] AS [Task], 
+    [Potential(client)].[Caretaker] AS [Caretaker], 
+    [Potential(client)].[Data inchiere contract] AS [Data inchiere contract]
+    FROM [dbo].[Potential(client)] AS [Potential(client)]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Evenimente_Leads (Ponturi)" Association="Self.FK_Evenimente_Leads (Ponturi)">
+      <End Role="Leads (Ponturi)" EntitySet="Leads (Ponturi)" />
+      <End Role="Evenimente" EntitySet="Evenimente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Potential(client)_Leads (Ponturi)" Association="Self.FK_Potential(client)_Leads (Ponturi)">
+      <End Role="Leads (Ponturi)" EntitySet="Leads (Ponturi)" />
+      <End Role="Potential(client)" EntitySet="Potential(client)" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Potential(client)_Utilizatori" Association="Self.FK_Potential(client)_Utilizatori">
+      <End Role="Utilizatori" EntitySet="Utilizatori" />
+      <End Role="Potential(client)" EntitySet="Potential(client)" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

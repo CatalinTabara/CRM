@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML;
+using System.Data.SqlClient;
 
 namespace Proiect_BD
 {
@@ -152,9 +153,37 @@ namespace Proiect_BD
             f6.ShowDialog();
         }
 
+        private void Export()
+        {
+            using (SqlConnection conn = new SqlConnection())
+            {
+                string cs = "Server=.;                             Database=CRM;                            Trusted_Connection=true";
+                conn.ConnectionString = cs;
+               
+                string query = "Select * from [Leads (Ponturi)]";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                da.Dispose();
+                ClosedXML.Excel.XLWorkbook wbook = new ClosedXML.Excel.XLWorkbook();
+                wbook.Worksheets.Add(dt, "test");
+
+                wbook.SaveAs(user.Username+ ".xlsx");
+                wbook.Dispose();
+            }
+
+
+            //    ClosedXML.Excel.XLWorkbook wbook = new ClosedXML.Excel.XLWorkbook();
+            //wbook.Worksheets.Add(dt, "test");
+
+            //wbook.SaveAs(txt_Username.Text + ".xlsx");
+            //wbook.Dispose();
+        }
+
         private void button_Export_Click(object sender, EventArgs e)
         {
-
+            Export();
         }
 
         private void button_AddLead_Click(object sender, EventArgs e)

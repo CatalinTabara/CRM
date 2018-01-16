@@ -1,6 +1,6 @@
 ﻿namespace Proiect_BD.Resources
 {
-    partial class Form_Delete_Lead
+    partial class Form_AddPotential
     {
         /// <summary>
         /// Required designer variable.
@@ -28,74 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button_AddPotential = new System.Windows.Forms.Button();
+            this.button_Cancel = new System.Windows.Forms.Button();
             this.label_ID = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.button_Cancel = new System.Windows.Forms.Button();
-            this.button_Delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // button_AddPotential
+            // 
+            this.button_AddPotential.Location = new System.Drawing.Point(112, 96);
+            this.button_AddPotential.Name = "button_AddPotential";
+            this.button_AddPotential.Size = new System.Drawing.Size(75, 23);
+            this.button_AddPotential.TabIndex = 15;
+            this.button_AddPotential.Text = "Add";
+            this.button_AddPotential.UseVisualStyleBackColor = true;
+            // 
+            // button_Cancel
+            // 
+            this.button_Cancel.Location = new System.Drawing.Point(12, 96);
+            this.button_Cancel.Name = "button_Cancel";
+            this.button_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.button_Cancel.TabIndex = 14;
+            this.button_Cancel.Text = "Cancel";
+            this.button_Cancel.UseVisualStyleBackColor = true;
             // 
             // label_ID
             // 
             this.label_ID.AutoSize = true;
-            this.label_ID.Location = new System.Drawing.Point(23, 20);
+            this.label_ID.Location = new System.Drawing.Point(31, 52);
             this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(24, 13);
-            this.label_ID.TabIndex = 0;
-            this.label_ID.Text = " ID:";
+            this.label_ID.Size = new System.Drawing.Size(21, 13);
+            this.label_ID.TabIndex = 16;
+            this.label_ID.Text = "ID:";
             // 
             // textBox_ID
             // 
-            this.textBox_ID.Location = new System.Drawing.Point(76, 17);
+            this.textBox_ID.Location = new System.Drawing.Point(112, 49);
             this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.Size = new System.Drawing.Size(26, 20);
-            this.textBox_ID.TabIndex = 1;
-            this.textBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ID_KeyPress);
+            this.textBox_ID.Size = new System.Drawing.Size(73, 20);
+            this.textBox_ID.TabIndex = 17;
             // 
-            // button_Cancel
-            // 
-            this.button_Cancel.Location = new System.Drawing.Point(12, 60);
-            this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(52, 23);
-            this.button_Cancel.TabIndex = 2;
-            this.button_Cancel.Text = "Cancel";
-            this.button_Cancel.UseVisualStyleBackColor = true;
-            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
-            // 
-            // button_Delete
-            // 
-            this.button_Delete.Location = new System.Drawing.Point(76, 60);
-            this.button_Delete.Name = "button_Delete";
-            this.button_Delete.Size = new System.Drawing.Size(52, 23);
-            this.button_Delete.TabIndex = 3;
-            this.button_Delete.Text = "Delete";
-            this.button_Delete.UseVisualStyleBackColor = true;
-            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
-            // 
-            // Form_Delete_Lead
+            // Form_AddPotential
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(148, 95);
-            this.Controls.Add(this.button_Delete);
-            this.Controls.Add(this.button_Cancel);
+            this.ClientSize = new System.Drawing.Size(240, 152);
             this.Controls.Add(this.textBox_ID);
             this.Controls.Add(this.label_ID);
+            this.Controls.Add(this.button_AddPotential);
+            this.Controls.Add(this.button_Cancel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_Delete_Lead";
-            this.Text = "Form_Delete_Lead";
-            this.Load += new System.EventHandler(this.Form_Delete_Lead_Load);
+            this.Name = "Form_AddPotential";
+            this.Text = "Form_AddLead";
+            this.Load += new System.EventHandler(this.Form_AddPotential_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Button button_AddPotential;
+        private System.Windows.Forms.Button button_Cancel;
         private System.Windows.Forms.Label label_ID;
         private System.Windows.Forms.TextBox textBox_ID;
-        private System.Windows.Forms.Button button_Cancel;
-        private System.Windows.Forms.Button button_Delete;
     }
 }

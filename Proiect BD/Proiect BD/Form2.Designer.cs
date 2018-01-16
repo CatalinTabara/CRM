@@ -72,6 +72,20 @@
             this.cRMDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cRMDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.leads__Ponturi_TableAdapter = new Proiect_BD.CRMDataSetTableAdapters.Leads__Ponturi_TableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.leadsPonturiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button_ImportCSV = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_AddPotential = new System.Windows.Forms.Button();
+            this.button_DeletePotential = new System.Windows.Forms.Button();
+            this.button_ExportPotential = new System.Windows.Forms.Button();
+            this.button_ImportPotential = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Leads.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box_Potential)).BeginInit();
@@ -86,10 +100,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).BeginInit();
+            this.tabPage_Potential.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -269,13 +286,13 @@
             this.tabControl1.Controls.Add(this.tabPage_Potential);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.ItemSize = new System.Drawing.Size(5, 20);
-            this.tabControl1.Location = new System.Drawing.Point(155, 77);
+            this.tabControl1.Location = new System.Drawing.Point(138, 77);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(495, 339);
+            this.tabControl1.Size = new System.Drawing.Size(512, 339);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage_Home
@@ -336,6 +353,7 @@
             // tabPage_Leads
             // 
             this.tabPage_Leads.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage_Leads.Controls.Add(this.button_ImportCSV);
             this.tabPage_Leads.Controls.Add(this.button_Export);
             this.tabPage_Leads.Controls.Add(this.button_DeleteLead);
             this.tabPage_Leads.Controls.Add(this.button_AddLead);
@@ -344,7 +362,7 @@
             this.tabPage_Leads.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage_Leads.Name = "tabPage_Leads";
             this.tabPage_Leads.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Leads.Size = new System.Drawing.Size(487, 311);
+            this.tabPage_Leads.Size = new System.Drawing.Size(504, 311);
             this.tabPage_Leads.TabIndex = 1;
             this.tabPage_Leads.Text = " ";
             // 
@@ -391,9 +409,9 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.dataGridView1.DataSource = this.leadsPonturiBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(467, 135);
+            this.dataGridView1.Size = new System.Drawing.Size(498, 145);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -465,10 +483,15 @@
             // tabPage_Potential
             // 
             this.tabPage_Potential.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage_Potential.Controls.Add(this.button_ImportPotential);
+            this.tabPage_Potential.Controls.Add(this.button_ExportPotential);
+            this.tabPage_Potential.Controls.Add(this.button_DeletePotential);
+            this.tabPage_Potential.Controls.Add(this.button_AddPotential);
+            this.tabPage_Potential.Controls.Add(this.dataGridView2);
             this.tabPage_Potential.Location = new System.Drawing.Point(4, 24);
             this.tabPage_Potential.Name = "tabPage_Potential";
             this.tabPage_Potential.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Potential.Size = new System.Drawing.Size(487, 311);
+            this.tabPage_Potential.Size = new System.Drawing.Size(504, 311);
             this.tabPage_Potential.TabIndex = 2;
             this.tabPage_Potential.Text = " ";
             // 
@@ -498,6 +521,118 @@
             // leads__Ponturi_TableAdapter
             // 
             this.leads__Ponturi_TableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            this.dataGridView2.DataSource = this.leadsPonturiBindingSource2;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(498, 150);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // leadsPonturiBindingSource2
+            // 
+            this.leadsPonturiBindingSource2.DataMember = "Leads (Ponturi)";
+            this.leadsPonturiBindingSource2.DataSource = this.cRMDataSet;
+            // 
+            // button_ImportCSV
+            // 
+            this.button_ImportCSV.Location = new System.Drawing.Point(389, 169);
+            this.button_ImportCSV.Name = "button_ImportCSV";
+            this.button_ImportCSV.Size = new System.Drawing.Size(92, 23);
+            this.button_ImportCSV.TabIndex = 4;
+            this.button_ImportCSV.Text = "Import CSV";
+            this.button_ImportCSV.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Lead_ID";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Lead_ID";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 73;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Nume";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Nume";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Prenume";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Prenume";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Nr tel";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Telefon";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Companie";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Companie";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Contact";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Contact";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // button_AddPotential
+            // 
+            this.button_AddPotential.Location = new System.Drawing.Point(14, 178);
+            this.button_AddPotential.Name = "button_AddPotential";
+            this.button_AddPotential.Size = new System.Drawing.Size(83, 39);
+            this.button_AddPotential.TabIndex = 1;
+            this.button_AddPotential.Text = "Add Potential Client";
+            this.button_AddPotential.UseVisualStyleBackColor = true;
+            // 
+            // button_DeletePotential
+            // 
+            this.button_DeletePotential.Location = new System.Drawing.Point(120, 178);
+            this.button_DeletePotential.Name = "button_DeletePotential";
+            this.button_DeletePotential.Size = new System.Drawing.Size(87, 39);
+            this.button_DeletePotential.TabIndex = 2;
+            this.button_DeletePotential.Text = "Delete Potential Client";
+            this.button_DeletePotential.UseVisualStyleBackColor = true;
+            // 
+            // button_ExportPotential
+            // 
+            this.button_ExportPotential.Location = new System.Drawing.Point(233, 178);
+            this.button_ExportPotential.Name = "button_ExportPotential";
+            this.button_ExportPotential.Size = new System.Drawing.Size(75, 39);
+            this.button_ExportPotential.TabIndex = 3;
+            this.button_ExportPotential.Text = "Export to Excel";
+            this.button_ExportPotential.UseVisualStyleBackColor = true;
+            // 
+            // button_ImportPotential
+            // 
+            this.button_ImportPotential.Location = new System.Drawing.Point(330, 178);
+            this.button_ImportPotential.Name = "button_ImportPotential";
+            this.button_ImportPotential.Size = new System.Drawing.Size(75, 39);
+            this.button_ImportPotential.TabIndex = 4;
+            this.button_ImportPotential.Text = "Import from CSV";
+            this.button_ImportPotential.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -531,10 +666,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSet)).EndInit();
+            this.tabPage_Potential.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRMDataSetBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadsPonturiBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -595,5 +733,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Button button_ImportCSV;
+        private System.Windows.Forms.Button button_ImportPotential;
+        private System.Windows.Forms.Button button_ExportPotential;
+        private System.Windows.Forms.Button button_DeletePotential;
+        private System.Windows.Forms.Button button_AddPotential;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.BindingSource leadsPonturiBindingSource2;
     }
 }

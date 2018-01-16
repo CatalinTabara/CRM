@@ -89,5 +89,10 @@ namespace Proiect_BD.Resources
                 e.Handled = true;
             }
         }
+
+        private void FormAdd_Lead_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

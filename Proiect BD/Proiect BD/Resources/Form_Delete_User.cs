@@ -27,10 +27,11 @@ namespace Proiect_BD.Resources
             int ID = 0;
             Model_CRM Context = new Model_CRM();
             Utilizatori user = new Utilizatori();
+            user = Context.Utilizatoris.Where(s => s.Employee_ID == Convert.ToInt32(textBox1.Text)).FirstOrDefault();
             try
             {
                 ID = Context.Utilizatoris.Max(s => s.Employee_ID);
-                if(ID> Convert.ToInt32(textBox1.Text))
+                if(user!=null)
                 {
                     int E_ID = Convert.ToInt32(textBox1.Text);
                     var itemToRemove = Context.Utilizatoris.SingleOrDefault(x => x.Employee_ID == E_ID); 
@@ -66,6 +67,11 @@ namespace Proiect_BD.Resources
             {
                 e.Handled = true;
             }
+        }
+
+        private void Form_Delete_User_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

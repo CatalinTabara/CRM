@@ -14,7 +14,7 @@ namespace Proiect_BD.Resources
     
     public partial class Potential_client_
     {
-        public decimal Lead_ID { get; set; }
+        public int Lead_ID { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
         public string Task { get; set; }

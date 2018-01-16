@@ -110,6 +110,12 @@
     <Compile Include="Resources\FormAdd_Lead.Designer.cs">
       <DependentUpon>FormAdd_Lead.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Form_AddPotential.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form_AddPotential.Designer.cs">
+      <DependentUpon>Form_AddPotential.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Form_Add_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,10 +160,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Model_CRM.Designer.cs">
+    <Compile Include="Resources\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model_CRM.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Potential_client_.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -183,6 +189,9 @@
     </Compile>
     <EmbeddedResource Include="Resources\FormAdd_Lead.resx">
       <DependentUpon>FormAdd_Lead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Form_AddPotential.resx">
+      <DependentUpon>Form_AddPotential.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Form_Add_User.resx">
       <DependentUpon>Form_Add_User.cs</DependentUpon>
@@ -240,12 +249,12 @@
     <None Include="Resources\button3.Image.png" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Resources\Model_CRM.edmx">
+    <EntityDeploy Include="Resources\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model_CRM.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Resources\Model_CRM.edmx.diagram">
-      <DependentUpon>Model_CRM.edmx</DependentUpon>
+    <None Include="Resources\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="Resources\shutdown-button-png-image-98694.png" />
   </ItemGroup>
@@ -269,12 +278,12 @@
     <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="Resources\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model_CRM.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model_CRM.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
